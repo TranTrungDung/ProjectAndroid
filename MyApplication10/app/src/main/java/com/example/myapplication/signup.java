@@ -24,10 +24,17 @@ public class signup extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-            FragmentManager fm = getSupportFragmentManager();
-            MikensicoFragment fragment = new MikensicoFragment();
-            fm.beginTransaction().replace(R.id.sign,fragment).commit();
+                FragmentManager fm = getSupportFragmentManager();
+                MikensicoFragment fragment = new MikensicoFragment();
+                fm.beginTransaction().replace(R.id.sign,fragment).commit();
+                finish();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
     }
 }

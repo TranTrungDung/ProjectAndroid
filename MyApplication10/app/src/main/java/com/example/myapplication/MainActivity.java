@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment temp = null;
                 switch (item.getItemId()){
-                    case R.id.menu_home : temp =new HomeFragment();
+                    case R.id.ac : temp =new MikensicoFragment();
                         break;
                     case R.id.category : temp =new CategoryFragment();
                         break;
-                    case R.id.ac : temp =new MikensicoFragment();
+                        case R.id.menu_home : temp =new HomeFragment();
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.FrameConatiner,temp).commit();
