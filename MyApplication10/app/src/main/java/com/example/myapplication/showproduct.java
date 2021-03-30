@@ -37,6 +37,10 @@ public class showproduct extends AppCompatActivity {
         //baiHocHelper.QueryData("INSERT INTO product VALUES(null,54,430000,'M','aodep','aodepquadi',2,'"+R.drawable.thf+"')");
         //baiHocHelper.QueryData("INSERT INTO product VALUES(null,55,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
         //baiHocHelper.QueryData("INSERT INTO product VALUES(null,56,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,1,56000,'XL','aodep','aodepquadi',2,'"+R.drawable.caiquan+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,2,430000,'M','aodep','aodepquadi',2,'"+R.drawable.thf+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,3,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,4,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
         //baiHocHelper.QueryData("DELETE FROM product");
         //baiHocHelper.QueryData("DELETE FROM user");
         //baiHocHelper.QueryData("DELETE FROM category");
@@ -64,7 +68,7 @@ public class showproduct extends AppCompatActivity {
         }
         else if(nam.equals("MIKENCO1")){
             Toast.makeText(showproduct.this,"MIKENCO1",Toast.LENGTH_LONG).show();
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '53'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '1'");
             while(data.moveToNext()){
                 String price = data.getString(2);
                 String size = data.getString(3);
@@ -77,7 +81,7 @@ public class showproduct extends AppCompatActivity {
             }
         }
         else if(nam.equals("MIKENCO2")){
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '54'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '2'");
             while(data.moveToNext()){
                 String price = data.getString(2);
                 String size = data.getString(3);
@@ -90,7 +94,7 @@ public class showproduct extends AppCompatActivity {
             }
         }
         else if(nam.equals("MIKENCO3")){
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '55'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '3'");
             while(data.moveToNext()){
                 String price = data.getString(2);
                 String size = data.getString(3);
@@ -102,7 +106,7 @@ public class showproduct extends AppCompatActivity {
                 arrayList.add(new baihoc(id,price, size,name,details,amount,im));
             }
         }else{
-            Cursor haha = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = 56");
+            Cursor haha = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '4'");
             while(haha.moveToNext()){
                 String price = haha.getString(2);
                 String size = haha.getString(3);

@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
         baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
         baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS detail(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
         //chendulieu
-        //baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
-        //baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
-        //baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
-        //baiHocHelper.QueryData("INSERT INTO category VALUES(null,'ao')");
-       // baiHocHelper.QueryData("INSERT INTO category VALUES(null,'quan')");
-       // baiHocHelper.QueryData("INSERT INTO category VALUES(null,'mu')");
-       // baiHocHelper.QueryData("INSERT INTO category VALUES(null,'giay')");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'ao')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'quan')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'mu')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'giay')");
 
 
 

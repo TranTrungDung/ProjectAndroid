@@ -141,8 +141,12 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:backgroundTint="@null"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="369dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/btncreate"
+        app:layout_constraintEnd_toStartOf="@+id/btncreate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phone_sg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
