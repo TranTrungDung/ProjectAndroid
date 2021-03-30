@@ -121,7 +121,6 @@ public class showproduct extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(getApplicationContext(),arrayList.get(position).toString(),Toast.LENGTH_LONG).show();
-                Toast.makeText(getApplicationContext(),arrayList.get(position).toString(),Toast.LENGTH_LONG).show();
             }
         });
     }
