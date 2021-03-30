@@ -22,6 +22,8 @@ public class MikensicoFragment extends Fragment {
     Button btnsignup;
     Button btnlogin;
     EditText user_lg, password_lg;
+    BaiHocHelper baiHocHelper;
+    private BaiHocHelper baihocHelper;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,19 +38,25 @@ public class MikensicoFragment extends Fragment {
                startActivity(intent);
             }
         });
+        baiHocHelper = new BaiHocHelper(getActivity(),"mikenco.sqlite",null,1);
         btnlogin = view.findViewById(R.id.btnlogin);
         password_lg = view.findViewById(R.id.password_lg);
         user_lg = view.findViewById(R.id.user_lg);
-        Cursor data = baihocHelper.GetData( "SELECT * FROM product");
+        Cursor data = baiHocHelper.GetData("SELECT * FROM user WHERE username = '"+ user_lg.getText().toString() +"'");
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(user_lg.getText().toString().equals("demo" )  && password_lg.getText().toString().equals("1")){
-                    Intent intent = new Intent(getActivity(),signup.class);
-                    startActivity(intent);
+                if(data != null ){
+                    if(password_lg.getText().toString().equals(data.getString(3))){
+                        Intent intent = new Intent(getActivity(),signup.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(getActivity(), "Password false!", Toast.LENGTH_LONG).show();
+                    }
                 }
-                else{
-                    Toast.makeText(getActivity(), "login fail!", Toast.LENGTH_LONG).show();
+                    else{
+                    Toast.makeText(getActivity(), "Username false", Toast.LENGTH_LONG).show();
                 }
             }
         });
