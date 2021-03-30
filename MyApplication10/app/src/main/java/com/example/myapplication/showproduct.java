@@ -33,10 +33,6 @@ public class showproduct extends AppCompatActivity {
         baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS product(id_pr INTEGER PRIMARY KEY AUTOINCREMENT,id_category INTEGER,price INTEGER,size VARCHAR(200),name VARCHAR(200),details VARCHAR(200),amount INTEGER,image BLOG,FOREIGN KEY (id_category) REFERENCES category(id_category))");
         baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
         baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS detail(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
-        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,56000,'XL','aodep','aodepquadi',2,'"+R.drawable.caiquan+"')");
-        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,54,430000,'M','aodep','aodepquadi',2,'"+R.drawable.thf+"')");
-        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,55,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
-        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,56,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(null,1,56000,'XL','aodep','aodepquadi',2,'"+R.drawable.caiquan+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(null,2,430000,'M','aodep','aodepquadi',2,'"+R.drawable.thf+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(null,3,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
