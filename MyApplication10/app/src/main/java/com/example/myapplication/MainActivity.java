@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
-//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'ao')");
-//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'quan')");
-//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'mu')");
-//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'giay')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'JACKETS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'SWEATERS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'SHIRTS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'PANTS')");
 
 
 
