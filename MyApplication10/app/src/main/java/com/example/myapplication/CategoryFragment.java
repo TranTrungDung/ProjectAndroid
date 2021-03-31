@@ -32,11 +32,11 @@ public class CategoryFragment extends Fragment {
         listView = (ListView)v.findViewById(R.id.listview);
         //khởi tạo dữ liệu mẫu
         ArrayList<country> arrayList = new ArrayList<>();
-        arrayList.add(new country("MIKENCO0", R.drawable.haha,1));
-        arrayList.add(new country("MIKENCO1", R.drawable.haha,1));
-        arrayList.add(new country("MIKENCO2",  R.drawable.medusa,2));
-        arrayList.add(new country("MIKENCO3", R.drawable.zeus,3));
-        arrayList.add(new country("MIKENCO4", R.drawable.zeus,4));
+        arrayList.add(new country("ALL COLLECTION", R.drawable.all,1));
+        arrayList.add(new country("JACKETS", R.drawable.model1,1));
+        arrayList.add(new country("SWEATERS",  R.drawable.shirt,2));
+        arrayList.add(new country("SHIRTS", R.drawable.polo,3));
+        arrayList.add(new country("PANTS", R.drawable.pants,4));
         //khởi tạo customArrayAdapter
         adapter = new adapter(getActivity(),
                 R.layout.category,arrayList);
