@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.category : temp =new CategoryFragment();
                         break;
                         case R.id.menu_home : temp =new HomeFragment();
+                        break;
+                    case R.id.ad : temp =new google();
 
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.FrameConatiner,temp).commit();

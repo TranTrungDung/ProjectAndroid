@@ -119,7 +119,15 @@ public class showproduct extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),arrayList.get(position).toString(),Toast.LENGTH_LONG).show();
+                Toast.makeText(showproduct.this,arrayList.get(position).getName(),Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(showproduct.this,detailPro.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("name",arrayList.get(position).getName());
+                bundle.putString("price",arrayList.get(position).getPrice());
+                bundle.putString("detail",arrayList.get(position).getDetails());
+                bundle.putInt("img",arrayList.get(position).getImage());
+                intent.putExtra("data",bundle);
+                startActivity(intent);
             }
         });
     }

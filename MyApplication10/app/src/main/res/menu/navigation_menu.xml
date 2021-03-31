@@ -11,7 +11,12 @@
         android:title="Category"
         android:icon="@drawable/ic_checkroom"/>
     <item
+    android:icon="@drawable/ic_baseline_location_on_24"
+    android:id="@+id/ad"
+    android:title="Address" />
+    <item
         android:icon="@drawable/ic_account_circle"
         android:id="@+id/ac"
         android:title="Mikenisto" />
+
 </menu>

@@ -1,9 +1,6 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,9 +51,9 @@ public class BaiHocAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(Layout,null);
 
-            holder.name = (TextView) convertView.findViewById(R.id.name);
+            holder.name = (TextView) convertView.findViewById(R.id.name1);
             holder.price = (TextView) convertView.findViewById(R.id.price);
-            holder.imageView = (ImageView) convertView.findViewById(R.id.imageView);
+            holder.imageView = (ImageView) convertView.findViewById(R.id.img);
             convertView.setTag(holder);
         }else {
             holder = (ViewHolder) convertView.getTag();

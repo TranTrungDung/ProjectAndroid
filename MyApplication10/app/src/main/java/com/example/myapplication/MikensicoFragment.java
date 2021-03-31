@@ -42,24 +42,21 @@ public class MikensicoFragment extends Fragment {
         btnlogin = view.findViewById(R.id.btnlogin);
         password_lg = view.findViewById(R.id.password_lg);
         user_lg = view.findViewById(R.id.user_lg);
-        Cursor data = baiHocHelper.GetData("SELECT * FROM user WHERE username = '"+ user_lg.getText().toString() +"'");
+
         btnlogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(data != null ){
-                    if(password_lg.getText().toString().equals(data.getString(3))){
+                @Override
+                public void onClick(View v) {
+                    Cursor data = baiHocHelper.GetData("SELECT * FROM user WHERE username = '"+user_lg.getText().toString()+"' AND password = '"+password_lg.getText().toString()+"'");
+                    if(data.getCount() == 0 )
+                    {
+                        Toast.makeText(getActivity(),"Username or password is incorrect",Toast.LENGTH_LONG).show();
+                    }
+                    else{
                         Intent intent = new Intent(getActivity(),signup.class);
                         startActivity(intent);
                     }
-                    else {
-                        Toast.makeText(getActivity(), "Password false!", Toast.LENGTH_LONG).show();
-                    }
-                }
-                    else{
-                    Toast.makeText(getActivity(), "Username false", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+               }
+            });
         return view;
 
     }
