@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,9 +31,9 @@ public class CategoryFragment extends Fragment {
         //khởi tạo dữ liệu mẫu
         ArrayList<country> arrayList = new ArrayList<>();
         arrayList.add(new country("ALL COLLECTION", R.drawable.all,1));
-        arrayList.add(new country("JACKETS", R.drawable.model1,1));
-        arrayList.add(new country("SWEATERS",  R.drawable.shirt,2));
-        arrayList.add(new country("SHIRTS", R.drawable.polo,3));
+        arrayList.add(new country("JACKETS", R.drawable.jacket,1));
+        arrayList.add(new country("SWEATERS",  R.drawable.sweaters,2));
+        arrayList.add(new country("T-SHIRTS", R.drawable.t_shirts,3));
         arrayList.add(new country("PANTS", R.drawable.pants,4));
         //khởi tạo customArrayAdapter
         adapter = new adapter(getActivity(),
