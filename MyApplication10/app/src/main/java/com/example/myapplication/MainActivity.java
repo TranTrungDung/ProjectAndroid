@@ -47,20 +47,20 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS detail(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
         //chendulieu
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,25,750000,'M','BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.pololove+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,25,700000,'M','SERPENT POLO','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.poloserpent+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,25,800000,'M','HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.polobaroque+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,25,700000,'M','ANGEL DEVIL ','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.tshirtangel+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,26,855000,'M','HERMES SWEATER','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.sweaterhermes+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,27,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,28,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
-
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,5,750000,'M','BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.pololove+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,5,700000,'M','SERPENT POLO','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.poloserpent+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,5,800000,'M','HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.polobaroque+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,5,700000,'M','ANGEL DEVIL ','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.tshirtangel+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,6,855000,'M','HERMES SWEATER','98% Cotton, 2% Spandex DTG Printer',2,'"+R.drawable.sweaterhermes+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,7,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,8,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
+//
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'JACKETS')");
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'SWEATERS')");
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'T-SHIRTS')");
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'PANTS')");
-
-        //baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
+//
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
         //xoadulieu
