@@ -38,65 +38,55 @@ public class showproduct extends AppCompatActivity {
             Cursor data = baiHocHelper.GetData("SELECT * FROM product");
             while(data.moveToNext()){
                 String price = data.getString(2);
-                String size = data.getString(3);
-                String details = data.getString(5);
-                int amount = data.getInt(6);
+                String details = data.getString(4);
                 int id = data.getInt(0);
-                String name = data.getString(4);
-                int im = data.getInt(7);
-                arrayList.add(new baihoc(id,price, size,name,details,amount,im));
+                String name = data.getString(3);
+                int im = data.getInt(5);
+                arrayList.add(new baihoc(id,price ,name,details,im));
 
             }
         }
         else if(nam.equals("JACKETS")){
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '27'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '1'");
             while(data.moveToNext()){
                 String price = data.getString(2);
-                String size = data.getString(3);
-                String details = data.getString(5);
-                int amount = data.getInt(6);
+                String details = data.getString(4);
                 int id = data.getInt(0);
-                String name = data.getString(4);
-                int im = data.getInt(7);
-                arrayList.add(new baihoc(id,price, size,name,details,amount,im));
+                String name = data.getString(3);
+                int im = data.getInt(5);
+                arrayList.add(new baihoc(id,price ,name,details,im));
             }
         }
         else if(nam.equals("SWEATERS")){
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '26'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '2'");
             while(data.moveToNext()){
                 String price = data.getString(2);
-                String size = data.getString(3);
-                String details = data.getString(5);
-                int amount = data.getInt(6);
+                String details = data.getString(4);
                 int id = data.getInt(0);
-                String name = data.getString(4);
-                int im = data.getInt(7);
-                arrayList.add(new baihoc(id,price, size,name,details,amount,im));
+                String name = data.getString(3);
+                int im = data.getInt(5);
+                arrayList.add(new baihoc(id,price ,name,details,im));
             }
         }
         else if(nam.equals("T-SHIRTS")){
-            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '25'");
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '3'");
             while(data.moveToNext()){
                 String price = data.getString(2);
-                String size = data.getString(3);
-                String details = data.getString(5);
-                int amount = data.getInt(6);
+                String details = data.getString(4);
                 int id = data.getInt(0);
-                String name = data.getString(4);
-                int im = data.getInt(7);
-                arrayList.add(new baihoc(id,price, size,name,details,amount,im));
+                String name = data.getString(3);
+                int im = data.getInt(5);
+                arrayList.add(new baihoc(id,price ,name,details,im));
             }
         }else{
-            Cursor haha = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = 28");
-            while(haha.moveToNext()){
-                String price = haha.getString(2);
-                String size = haha.getString(3);
-                String details = haha.getString(5);
-                int amount = haha.getInt(6);
-                int id = haha.getInt(0);
-                String name = haha.getString(4);
-                int im = haha.getInt(7);
-                arrayList.add(new baihoc(id,price, size,name,details,amount,im));
+            Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = 4");
+            while(data.moveToNext()){
+                String price = data.getString(2);
+                String details = data.getString(4);
+                int id = data.getInt(0);
+                String name = data.getString(3);
+                int im = data.getInt(5);
+                arrayList.add(new baihoc(id,price ,name,details,im));
             }
         }
 
@@ -105,7 +95,6 @@ public class showproduct extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(showproduct.this,arrayList.get(position).getName(),Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(showproduct.this,detailPro.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("name",arrayList.get(position).getName());

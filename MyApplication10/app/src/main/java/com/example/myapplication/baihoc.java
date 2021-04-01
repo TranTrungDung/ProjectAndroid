@@ -5,10 +5,8 @@ import android.icu.text.TimeZoneFormat;
 public class baihoc {
     private int id_pr;
     private String price;
-    private String size;
     private String name;
     private String details;
-    private int amount;
     private int image;
 
 
@@ -29,13 +27,8 @@ public class baihoc {
         this.price = price;
     }
 
-    public String getSize() {
-        return size;
-    }
 
-    public void setSize(String size) {
-        this.size = size;
-    }
+
 
     public String getName() {
         return name;
@@ -53,14 +46,6 @@ public class baihoc {
         this.details = details;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
     public int  getImage() {
         return image;
     }
@@ -69,13 +54,11 @@ public class baihoc {
         this.image = image;
     }
 
-    public baihoc(int id_pr, String price, String size, String name, String details, int amount, int image) {
+    public baihoc(int id_pr, String price,  String name, String details,  int image) {
         this.id_pr = id_pr;
         this.price = price;
-        this.size = size;
         this.name = name;
         this.details = details;
-        this.amount = amount;
         this.image = image;
     }
 }
