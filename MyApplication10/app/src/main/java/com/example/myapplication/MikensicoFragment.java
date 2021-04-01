@@ -52,15 +52,20 @@ public class MikensicoFragment extends Fragment {
                         Toast.makeText(getActivity(),"Username or password is incorrect",Toast.LENGTH_LONG).show();
                     }
                     else{
-                        Intent intent = new Intent(getActivity(),signup.class);
-                        startActivity(intent);
+                        FragmentManager fm = getFragmentManager();
+//                        MikensicoFragment mikensicoFragment  = new MikensicoFragment();
+                        FragmentTransaction ft = fm.beginTransaction();
+                        ft.replace(R.id.medu, new userScreen());
+                        ft.addToBackStack(null);
+                        ft.commit();
+                        onDestroy();
                     }
+
                }
             });
+
         return view;
 
     }
-
-
 
 }
