@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class adapter extends ArrayAdapter<country> {
+public class  adapter extends ArrayAdapter<country> {
     Context context;
     ArrayList<country> arrayList;
     int layoutResource;

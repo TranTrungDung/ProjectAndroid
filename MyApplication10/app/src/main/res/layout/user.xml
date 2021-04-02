@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/userfrag"
+    android:background="@color/white"
+    tools:context=".userScreen">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="410dp"
+        android:layout_height="197dp"
+        android:src="@drawable/anhouser"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="116dp"
+        android:layout_height="33dp"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.124" />
+
+    <TextView
+        android:id="@+id/member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Member"
+        app:layout_constraintEnd_toEndOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/rank"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="Ranking"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@+id/myOrders"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965" />
+
+    <Button
+        android:id="@+id/myOrders"
+        android:layout_width="415dp"
+        android:layout_height="59dp"
+        android:text="My orders"
+        android:textAlignment="textStart"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="316dp" />
+
+    <Button
+        android:id="@+id/Mikenisco"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:text="Mikenisco"
+        android:textAlignment="textStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myOrders" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="104dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:text="MY MIKENCO"
+        app:layout_constraintBottom_toTopOf="@+id/rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginTop="56dp"
+        android:text="Log out"
+        android:textAlignment="textStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Mikenisco"
+        app:layout_constraintTop_toBottomOf="@+id/Mikenisco" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
