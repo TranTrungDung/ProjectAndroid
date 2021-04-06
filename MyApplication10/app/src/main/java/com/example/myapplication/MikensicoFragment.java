@@ -86,7 +86,6 @@ public class MikensicoFragment extends Fragment {
         }else{
 
             sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
             view = inflater.inflate(R.layout.fragment_user_screen, container, false);
             btnlogout = view.findViewById(R.id.btnLogout);
             username  = view.findViewById(R.id.username);

@@ -37,15 +37,9 @@ public class showproduct extends AppCompatActivity {
     GridView lv;
     BaiHocAdapter adapter;
     Button button;
-
     TextView bag;
     SharedPreferences sharedpreferences;
-
     ProgressDialog progressDialog;
-
-
-
-    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,8 +148,6 @@ public class showproduct extends AppCompatActivity {
             Toast.makeText(showproduct.this,"khong",Toast.LENGTH_LONG).show();
         }
         else {
-            Cursor data = baiHocHelper.GetData("SELECT SUM(amount) FROM details_bill WHERE  ");
-                int id = data.getInt(0);
         }
     }
     @Override
