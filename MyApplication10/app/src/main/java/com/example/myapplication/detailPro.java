@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toolbar;
@@ -11,6 +13,7 @@ import android.widget.Toolbar;
 public class detailPro extends AppCompatActivity {
     TextView name1,price,detail;
     ImageView img;
+    ImageButton btnimg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,7 @@ public class detailPro extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.img);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
+        String all = bundle.getString("category");
         String ten = bundle.getString("name");
         String gia = bundle.getString("price");
         String mota = bundle.getString("detail");
@@ -28,5 +32,17 @@ public class detailPro extends AppCompatActivity {
         name1.setText(ten);
         price.setText(gia);
         detail.setText(mota);
+        btnimg = (ImageButton) findViewById(R.id.imgClose);
+        btnimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(detailPro.this,showproduct.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("category",all);
+                intent.putExtra("data",bundle);
+                startActivity(intent1);
+
+            }
+        });
     }
 }

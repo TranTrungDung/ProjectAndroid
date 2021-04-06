@@ -46,7 +46,7 @@ public class CategoryFragment extends Fragment {
 
                         Intent intent = new Intent(getActivity(),showproduct.class);
                         Bundle bundle = new Bundle();
-                        bundle.putString("name",arrayList.get(position).getName());
+                        bundle.putString("category",arrayList.get(position).getName());
                         intent.putExtra("data",bundle);
                         startActivity(intent);
 

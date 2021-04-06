@@ -40,6 +40,7 @@ public class showproduct extends AppCompatActivity {
     TextView bag;
     SharedPreferences sharedpreferences;
     ProgressDialog progressDialog;
+    String allcategory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,8 +53,9 @@ public class showproduct extends AppCompatActivity {
         lv.setAdapter(adapter);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
-        String nam = bundle.getString("name");
+        String nam = bundle.getString("category");
         if(nam.equals("ALL COLLECTION")){
+            allcategory = "ALL COLLECTION";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product");
             while(data.moveToNext()){
                 String price = data.getString(2);
@@ -66,6 +68,7 @@ public class showproduct extends AppCompatActivity {
             }
         }
         else if(nam.equals("JACKETS")){
+            allcategory = "JACKETS";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '1'");
             while(data.moveToNext()){
                 String price = data.getString(2);
@@ -77,6 +80,7 @@ public class showproduct extends AppCompatActivity {
             }
         }
         else if(nam.equals("SWEATERS")){
+            allcategory = "SWEATERS";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '2'");
             while(data.moveToNext()){
                 String price = data.getString(2);
@@ -88,6 +92,7 @@ public class showproduct extends AppCompatActivity {
             }
         }
         else if(nam.equals("T-SHIRTS")){
+            allcategory = "T-SHIRTS";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = '3'");
             while(data.moveToNext()){
                 String price = data.getString(2);
@@ -98,6 +103,7 @@ public class showproduct extends AppCompatActivity {
                 arrayList.add(new baihoc(id,price ,name,details,im));
             }
         }else{
+            allcategory = "PANTS";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product WHERE id_category = 4");
             while(data.moveToNext()){
                 String price = data.getString(2);
@@ -122,11 +128,13 @@ public class showproduct extends AppCompatActivity {
                 );
                 Intent intent = new Intent(showproduct.this,detailPro.class);
                 Bundle bundle = new Bundle();
+                bundle.putString("category",allcategory);
                 bundle.putString("name",arrayList.get(position).getName());
                 bundle.putString("price",arrayList.get(position).getPrice());
                 bundle.putString("detail",arrayList.get(position).getDetails());
                 bundle.putInt("img",arrayList.get(position).getImage());
                 intent.putExtra("data",bundle);
+
                 startActivity(intent);
             }
         });
@@ -153,7 +161,8 @@ public class showproduct extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        progressDialog.dismiss();
+
+
     }
 }
 
