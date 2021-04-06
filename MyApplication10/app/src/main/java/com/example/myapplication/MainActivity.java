@@ -47,12 +47,14 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS product(id_product INTEGER PRIMARY KEY ,id_category INTEGER,price INTEGER,name VARCHAR(200),details VARCHAR(200),image BLOG,FOREIGN KEY (id_category) REFERENCES category(id_category))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS storage_product(id_str INTEGER PRIMARY KEY AUTOINCREMENT  ,id_product INTEGER,size CHAR(10),amount INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
-//        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
+//        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_product INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
 
 
 //
 //        chendulieu
 //
+//        baiHocHelper.QueryData("INSERT INTO bill VALUES(1,1,6/4/2021,730000,0)");
+//        baiHocHelper.QueryData("INSERT INTO details_bill VALUES(1,1,1,730000)");
 
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(1,3,750000,'BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.pololove+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
