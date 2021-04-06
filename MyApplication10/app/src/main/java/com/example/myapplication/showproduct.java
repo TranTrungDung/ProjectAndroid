@@ -1,30 +1,45 @@
 package com.example.myapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
 
 public class showproduct extends AppCompatActivity {
+    public static final String MyPREFERENCES = "user";
+    public static final String Name = "nameKey";
+    public static final String Pass = "pass";
     BaiHocHelper baiHocHelper;
     ArrayList<baihoc>arrayList;
     GridView lv;
     BaiHocAdapter adapter;
     Button button;
+    TextView bag;
+    SharedPreferences sharedpreferences;
 
+
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showproduct);
+
         //tao database
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
         lv = (GridView) findViewById(R.id.lv);
@@ -105,5 +120,26 @@ public class showproduct extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageButton imageButton = findViewById(R.id.close);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getSupportFragmentManager();
+                CategoryFragment fragment = new CategoryFragment();
+                fm.beginTransaction().replace(R.id.show,fragment).commit();
+                finish();
+            }
+        });
+
+        sharedpreferences = showproduct.this.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        String name1 = sharedpreferences.getString("nameKey","");
+
+        if(name1.isEmpty()){
+            Toast.makeText(showproduct.this,"khong",Toast.LENGTH_LONG).show();
+        }
+        else {
+            Cursor data = baiHocHelper.GetData("SELECT SUM(amount) FROM details_bill WHERE  ");
+                int id = data.getInt(0);
+        }
     }
 }

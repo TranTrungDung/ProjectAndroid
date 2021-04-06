@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         //chendulieu
 
+
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(1,3,750000,'BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.pololove+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(3,3,800000,'HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.polobaroque+"')");
@@ -95,11 +96,28 @@ public class MainActivity extends AppCompatActivity {
 
 //
 
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'XL','STRIPLE POLO','98% Cotton, 2% Spandex DTG Print',2,'"+R.drawable.polohermes+"')");
+//        baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'M','TEDDY POLO ','98% Cotton, 2% Spandex Suede leather',2,'"+R.drawable.poloteddy+"')");
+  //      baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'M','TEDDY POLO ','98% Cotton, 2% Spandex DTG Print',2,'"+R.drawable.polobaroque+"')");
+    //    baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,700000,'M','TEDDY POLO ','98% Cotton, 2% Spandex DTG Print',2,'"+R.drawable.tshirtangel+"')");
+      //  baiHocHelper.QueryData("INSERT INTO product VALUES(null,54,430000,'M','TEDDY POLO ','98% Cotton, 2% Spandex Suede leather',2,'"+R.drawable.poloteddy+"')");
+        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,55,122000,'L','aodep','aodepquadi',2,'"+R.drawable.th2+"')");
+        //baiHocHelper.QueryData("INSERT INTO product VALUES(null,56,122000,'L','aodep','aodepquadi',2,'"+R.drawable.ao2+"')");
+
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'JACKETS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'SWEATERS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'T-SHIRTS')");
+//        baiHocHelper.QueryData("INSERT INTO category VALUES(null,'PANTS')");
+
+        //baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
+
         //xoadulieu
-//        baiHocHelper.QueryData("DELETE FROM product");
+//baiHocHelper.QueryData("DELETE FROM product");
         // Khong xoa
-//        baiHocHelper.QueryData("DELETE FROM user");
-//        baiHocHelper.QueryData("DELETE FROM category");
+//   baiHocHelper.QueryData("DELETE FROM user");
+//      baiHocHelper.QueryData("DELETE FROM category");
 
 
 
