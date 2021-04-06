@@ -151,12 +151,23 @@ public class showproduct extends AppCompatActivity {
 
         sharedpreferences = showproduct.this.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         String name1 = sharedpreferences.getString("nameKey","");
-
+        bag = (TextView) findViewById(R.id.bag);
         if(name1.isEmpty()){
             Toast.makeText(showproduct.this,"khong",Toast.LENGTH_LONG).show();
         }
         else {
+            int id = 0;
+            Cursor data = baiHocHelper.GetData("SELECT amount FROM details_bill,bill,user WHERE details_bill.id_bill = bill.id_bill AND bill.id = user.id AND username = '"+name1+"' ");
+            while(data.moveToNext()) {
+                id = id + data.getInt(0);
+
+            }
+
+            String s=String.valueOf(id);
+            bag.setText(s);
         }
+
+
     }
     @Override
     public void onBackPressed()
