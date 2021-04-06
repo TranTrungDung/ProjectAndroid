@@ -8,40 +8,66 @@
     android:background="#F5F5F5"
     tools:context=".userScreen">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/contrainlayout"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MIKENISTO"
+            android:fontFamily="sans-serif"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.757" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="197dp"
+        android:layout_marginBottom="568dp"
         android:src="@drawable/anhuser"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/username"
         android:layout_width="116dp"
         android:layout_height="33dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:text="Username"
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.19" />
+
 
     <TextView
         android:id="@+id/member"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Member"
         app:layout_constraintStart_toStartOf="@+id/username"
         app:layout_constraintTop_toBottomOf="@+id/username" />
-
 
     <TextView
         android:id="@+id/textView8"
@@ -56,9 +82,11 @@
         android:id="@+id/rank"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/coloruserscreen"
+        android:background="@drawable/bottomline"
         android:gravity="center_vertical"
         android:text="Ranking"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:backgroundTint="@null"
@@ -73,9 +101,12 @@
         android:id="@+id/myOrders"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@drawable/coloruserscreen"
+        android:layout_marginBottom="476dp"
+        android:background="@drawable/bottomline"
         android:gravity="center_vertical"
         android:text="My orders"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:backgroundTint="@null"
@@ -93,6 +124,8 @@
         android:background="@drawable/coloruserscreen"
         android:gravity="center_vertical"
         android:text="Mikenisto"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:backgroundTint="@null"
@@ -109,6 +142,8 @@
         android:background="@drawable/coloruserscreen"
         android:gravity="center_vertical"
         android:text="Log out"
+        android:fontFamily="sans-serif"
+        android:textSize="15dp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:backgroundTint="@null"

@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(2,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(3,'deodeo@gmail.com','Quynh','12345','0987654321')");
 
-        //xoadulieu
-//baiHocHelper.QueryData("DELETE FROM product");
 
 //        //xoadulieu
 //        baiHocHelper.QueryData("DELETE FROM product");
