@@ -38,7 +38,6 @@ public class detailPro extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent1 = new Intent(detailPro.this,showproduct.class);
                 Bundle bundle = new Bundle();
-                bundle.putInt("key",2);
                 bundle.putString("category",all);
                 intent1.putExtra("data",bundle);
                 finish();

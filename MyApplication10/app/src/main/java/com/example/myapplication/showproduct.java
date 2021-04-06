@@ -54,7 +54,6 @@ public class showproduct extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
         String nam = bundle.getString("category");
-        Toast.makeText(showproduct.this,nam,Toast.LENGTH_LONG).show();
         if(nam.equals("ALL COLLECTION")){
             allcategory = "ALL COLLECTION";
             Cursor data = baiHocHelper.GetData("SELECT * FROM product");
