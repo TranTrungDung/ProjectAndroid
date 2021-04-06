@@ -25,6 +25,7 @@ public class CategoryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         //Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_category, container, false);
         listView = (ListView)v.findViewById(R.id.listview);
@@ -51,6 +52,7 @@ public class CategoryFragment extends Fragment {
 
             }
         });
+
         return v;
 
     }

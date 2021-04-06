@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -20,10 +22,13 @@ public class showproduct extends AppCompatActivity {
     GridView lv;
     BaiHocAdapter adapter;
     Button button;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Products");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_showproduct);
         //tao database
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
@@ -95,6 +100,12 @@ public class showproduct extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                progressDialog = new ProgressDialog(showproduct.this);
+                progressDialog.show();
+                progressDialog.setContentView(R.layout.progress_dialog);
+                progressDialog.getWindow().setBackgroundDrawableResource(
+                        android.R.color.transparent
+                );
                 Intent intent = new Intent(showproduct.this,detailPro.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("name",arrayList.get(position).getName());
@@ -106,4 +117,10 @@ public class showproduct extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed()
+    {
+        progressDialog.dismiss();
+    }
 }
+

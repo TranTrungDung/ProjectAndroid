@@ -13,9 +13,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map" />
-        <activity android:name=".showproduct"></activity>
+        <activity android:name=".showproduct" />
+
 =======
-        <activity android:name=".Bag"></activity>
+        <activity android:name=".Bag"/>
 >>>>>>> Stashed changes
         <activity android:name=".detailPro" />
         <activity android:name=".signup" />
@@ -26,6 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

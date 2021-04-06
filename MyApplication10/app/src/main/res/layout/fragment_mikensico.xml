@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/medusa"
+    android:background="@drawable/zeus"
     android:padding="40dp"
     tools:context=".MikensicoFragment"
 
@@ -59,7 +59,7 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="48dp"
         android:text="@string/text"
-        android:textColorLink="#C13D63"
+        android:textColorLink="#00FFFF"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_lg" />

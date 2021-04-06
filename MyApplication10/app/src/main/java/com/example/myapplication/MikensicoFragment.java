@@ -1,7 +1,9 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -29,6 +32,8 @@ public class MikensicoFragment extends Fragment {
     Button btnlogin;
     EditText user_lg, password_lg;
     BaiHocHelper baiHocHelper;
+    Button btnLogout;
+    TextView username;
     private BaiHocHelper baihocHelper;
 
 
@@ -43,7 +48,7 @@ public class MikensicoFragment extends Fragment {
         String name = sharedpreferences.getString("nameKey","");
         if (name == ""){
             view = inflater.inflate(R.layout.fragment_mikensico, container, false);
-            Toast.makeText(getActivity(),"",Toast.LENGTH_LONG).show();
+//            Toast.makeText(getActivity(),"abc",Toast.LENGTH_LONG).show();
             btnsignup = view.findViewById(R.id.btnsignup);
             btnsignup.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -69,9 +74,7 @@ public class MikensicoFragment extends Fragment {
                     else{
                         String user  = user_lg.getText().toString();
                         String passwd  = password_lg.getText().toString();
-
                         SharedPreferences.Editor editor = sharedpreferences.edit();
-
                         editor.putString(Name, user);
                         editor.putString(Pass, passwd);
                         editor.commit();
@@ -83,15 +86,57 @@ public class MikensicoFragment extends Fragment {
             });
 
         }else{
-            //sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-            //SharedPreferences.Editor editor = sharedpreferences.edit();
-            //editor.clear();
-            //editor.apply();
-            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
-            view = inflater.inflate(R.layout.fragment_user_screen, container, false);
-            //editor.remove("nameKey");
-            //editor.remove("pass");
 
+//            sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+//            SharedPreferences.Editor editor = sharedpreferences.edit();
+//            editor.clear();
+//            editor.apply();
+//            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
+//            view = inflater.inflate(R.layout.fragment_user_screen, container, false);
+//            btnLogout.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                }
+//            });
+//            editor.remove("nameKey");
+//            editor.remove("pass");
+            sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+//            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
+            view = inflater.inflate(R.layout.fragment_user_screen, container, false);
+            username = view.findViewById(R.id.username);
+            username.setText(name);
+            btnLogout = view.findViewById(R.id.btnLogout);
+            btnLogout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity()  );
+// gán tiêu đề cho dialog
+                    alertDialogBuilder.setTitle("Đăng xuất");
+// hiển thị Thông điệp (thông báo) lên dialog
+                    alertDialogBuilder .setMessage("Bạn có muốn đăng xuất không ?")
+                            .setCancelable(false)
+                            .setPositiveButton("Có",new DialogInterface.OnClickListener()  {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                                    editor.clear();
+                                    editor.apply();
+                                    Intent intent = getActivity().getIntent();
+                                    getActivity().finish();
+                                    startActivity(intent);
+                                }
+                            })
+                            .setNegativeButton("Không",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    // Tạo alert dialog
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    // Hiển thị dialog
+                    alertDialog.show();
+                }
+            });
         }
         return view;
     }

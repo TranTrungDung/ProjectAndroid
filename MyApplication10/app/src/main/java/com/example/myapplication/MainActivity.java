@@ -48,9 +48,9 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS storage_product(id_str INTEGER PRIMARY KEY AUTOINCREMENT  ,id_product INTEGER,size CHAR(10),amount INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
-
-        //chendulieu
-
+//
+//        chendulieu
+//
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(1,3,750000,'BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.pololove+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(3,3,800000,'HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.polobaroque+"')");
@@ -95,8 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
 //
 
-        //xoadulieu
+//        //xoadulieu
 //        baiHocHelper.QueryData("DELETE FROM product");
+//        baiHocHelper.QueryData("DELETE FROM storage_product");
         // Khong xoa
 //        baiHocHelper.QueryData("DELETE FROM user");
 //        baiHocHelper.QueryData("DELETE FROM category");
