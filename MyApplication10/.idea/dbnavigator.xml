@@ -24,12 +24,23 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7">
+        <schema name="main" object-types="view, table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
+<<<<<<< HEAD
     <connection id="e96add93-977c-4187-85b1-1c901437327b">
     </connection>
     <connection id="20e955fd-c800-48c5-8223-1c695ef46427">
+=======
+    <connection id="116f63bf-c952-4573-a0a7-fd71112e99e7">
+      <console name="Connection" type="STANDARD" schema="main" session="Main" />
+    </connection>
+    <connection id="23a8d055-4806-4b8b-9bbc-3fd2b8983d53">
+>>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
       <console name="Connection 1" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -37,17 +48,13 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="e96add93-977c-4187-85b1-1c901437327b" />
-    <connection id="20e955fd-c800-48c5-8223-1c695ef46427" />
+    <connection id="116f63bf-c952-4573-a0a7-fd71112e99e7" />
+    <connection id="23a8d055-4806-4b8b-9bbc-3fd2b8983d53" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="20e955fd-c800-48c5-8223-1c695ef46427" dataset="main.category" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="20e955fd-c800-48c5-8223-1c695ef46427" dataset="main.product" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="e96add93-977c-4187-85b1-1c901437327b" dataset="main.category" active-filter-id="8983cd58-ac03-462a-b8cc-dd0755c957eb">
-      <filter id="8983cd58-ac03-462a-b8cc-dd0755c957eb" name="0" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id_category" operator="&gt;" value="0" active="true" />
-      </filter>
-    </filter-actions>
+    <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.category" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.storage_product" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.product" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -75,7 +82,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="e96add93-977c-4187-85b1-1c901437327b" active="true">
+      <connection id="116f63bf-c952-4573-a0a7-fd71112e99e7" active="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -90,7 +97,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="F:\mikenco.sqlite" schema="main" />
+            <file path="F:\mikenco1.sqlite" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -162,13 +169,13 @@
           <object-name-filters />
         </object-filters>
       </connection>
-      <connection id="20e955fd-c800-48c5-8223-1c695ef46427" active="true">
+      <connection id="23a8d055-4806-4b8b-9bbc-3fd2b8983d53" active="true">
         <database>
           <name value="Connection 1" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="3.21" />
+          <database-version value="9999.0" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
@@ -177,7 +184,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="F:\mikenco1.sqlite" schema="main" />
+            <file path="sqlite.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

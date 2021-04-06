@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 public class detailPro extends AppCompatActivity {
     TextView name1,price,detail;
@@ -13,6 +14,8 @@ public class detailPro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Details product");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_detail_pro);
         name1 = (TextView) findViewById(R.id.name1);
         price = (TextView) findViewById(R.id.pricee) ;

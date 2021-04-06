@@ -1,7 +1,15 @@
 package com.example.myapplication;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
 import android.content.Context;
+=======
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.app.ProgressDialog;
+>>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -30,14 +38,20 @@ public class showproduct extends AppCompatActivity {
     GridView lv;
     BaiHocAdapter adapter;
     Button button;
+<<<<<<< HEAD
     TextView bag;
     SharedPreferences sharedpreferences;
+=======
+    ProgressDialog progressDialog;
+>>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
 
 
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Products");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_showproduct);
 
         //tao database
@@ -110,6 +124,12 @@ public class showproduct extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                progressDialog = new ProgressDialog(showproduct.this);
+                progressDialog.show();
+                progressDialog.setContentView(R.layout.progress_dialog);
+                progressDialog.getWindow().setBackgroundDrawableResource(
+                        android.R.color.transparent
+                );
                 Intent intent = new Intent(showproduct.this,detailPro.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("name",arrayList.get(position).getName());
@@ -142,4 +162,10 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
         }
     }
+    @Override
+    public void onBackPressed()
+    {
+        progressDialog.dismiss();
+    }
 }
+
