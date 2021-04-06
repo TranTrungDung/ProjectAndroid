@@ -41,6 +41,7 @@ public class detailPro extends AppCompatActivity {
                 bundle.putInt("key",2);
                 bundle.putString("category",all);
                 intent1.putExtra("data",bundle);
+                finish();
                 startActivity(intent1);
 
             }

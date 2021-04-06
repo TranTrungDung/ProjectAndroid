@@ -135,7 +135,7 @@ public class showproduct extends AppCompatActivity {
                 bundle.putString("detail",arrayList.get(position).getDetails());
                 bundle.putInt("img",arrayList.get(position).getImage());
                 intent.putExtra("data",bundle);
-
+                finish();
                 startActivity(intent);
             }
         });
