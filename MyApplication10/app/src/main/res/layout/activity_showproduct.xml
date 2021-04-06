@@ -8,10 +8,8 @@
     android:id="@+id/show"
     tools:context=".showproduct">
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
+
     <GridView
         android:id="@+id/lv"
         android:layout_width="match_parent"
@@ -21,7 +19,7 @@
         android:background="@color/white"
         android:columnWidth="160dp"
         android:numColumns="auto_fit"
-<<<<<<< HEAD
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

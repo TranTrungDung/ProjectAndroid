@@ -30,7 +30,7 @@ public class MikensicoFragment extends Fragment {
     // TODO: Rename and change types of parameters
     Button btnsignup,btnlogout;
     Button btnlogin;
-    EditText user_lg, password_lg,username;
+    EditText user_lg, password_lg;
     BaiHocHelper baiHocHelper;
     Button btnLogout;
     TextView username;
@@ -45,10 +45,8 @@ public class MikensicoFragment extends Fragment {
         String name = sharedpreferences.getString("nameKey","");
         if (name == ""){
             view = inflater.inflate(R.layout.fragment_mikensico, container, false);
-<<<<<<< HEAD
-=======
+
 //            Toast.makeText(getActivity(),"abc",Toast.LENGTH_LONG).show();
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
             btnsignup = view.findViewById(R.id.btnsignup);
             btnsignup.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -86,38 +84,14 @@ public class MikensicoFragment extends Fragment {
             });
 
         }else{
-<<<<<<< HEAD
+
             sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
             Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
             view = inflater.inflate(R.layout.fragment_user_screen, container, false);
-            btnlogout = view.findViewById(R.id.Logout);
-            //username  = view.findViewById(R.id.username);
-            //username.setText(name);
-            btnlogout.setOnClickListener(new View.OnClickListener() {
-=======
-
-//            sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-//            SharedPreferences.Editor editor = sharedpreferences.edit();
-//            editor.clear();
-//            editor.apply();
-//            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
-//            view = inflater.inflate(R.layout.fragment_user_screen, container, false);
-//            btnLogout.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//                }
-//            });
-//            editor.remove("nameKey");
-//            editor.remove("pass");
-            sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-//            Toast.makeText(getActivity(),name,Toast.LENGTH_LONG).show();
-            view = inflater.inflate(R.layout.fragment_user_screen, container, false);
-            username = view.findViewById(R.id.username);
+            btnlogout = view.findViewById(R.id.btnLogout);
+            username  = view.findViewById(R.id.username);
             username.setText(name);
-            btnLogout = view.findViewById(R.id.btnLogout);
-            btnLogout.setOnClickListener(new View.OnClickListener() {
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
+            btnlogout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity()  );
@@ -128,21 +102,14 @@ public class MikensicoFragment extends Fragment {
                             .setCancelable(false)
                             .setPositiveButton("Có",new DialogInterface.OnClickListener()  {
                                 public void onClick(DialogInterface dialog, int id) {
-<<<<<<< HEAD
+
                                      SharedPreferences.Editor editor = sharedpreferences.edit();
                                      editor.clear();
                                      editor.apply();
                                      Intent intent = getActivity().getIntent();
                                      getActivity().finish();
                                      startActivity(intent);
-=======
-                                    SharedPreferences.Editor editor = sharedpreferences.edit();
-                                    editor.clear();
-                                    editor.apply();
-                                    Intent intent = getActivity().getIntent();
-                                    getActivity().finish();
-                                    startActivity(intent);
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
+
                                 }
                             })
                             .setNegativeButton("Không",new DialogInterface.OnClickListener() {

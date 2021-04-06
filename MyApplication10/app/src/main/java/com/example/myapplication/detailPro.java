@@ -14,8 +14,6 @@ public class detailPro extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Details product");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_detail_pro);
         name1 = (TextView) findViewById(R.id.name1);
         price = (TextView) findViewById(R.id.pricee) ;

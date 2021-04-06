@@ -31,16 +31,10 @@
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-<<<<<<< HEAD
-    <connection id="e96add93-977c-4187-85b1-1c901437327b">
-    </connection>
-    <connection id="20e955fd-c800-48c5-8223-1c695ef46427">
-=======
     <connection id="116f63bf-c952-4573-a0a7-fd71112e99e7">
       <console name="Connection" type="STANDARD" schema="main" session="Main" />
     </connection>
     <connection id="23a8d055-4806-4b8b-9bbc-3fd2b8983d53">
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
       <console name="Connection 1" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
