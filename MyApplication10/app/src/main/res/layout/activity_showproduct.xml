@@ -7,11 +7,6 @@
     android:background="@color/black"
     android:id="@+id/show"
     tools:context=".showproduct">
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
     <GridView
         android:id="@+id/lv"
         android:layout_width="match_parent"
@@ -21,11 +16,11 @@
         android:background="@color/white"
         android:columnWidth="160dp"
         android:numColumns="auto_fit"
-<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="NotSibling"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout"
@@ -44,7 +39,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.619"
-                app:srcCompat="@drawable/ic_shopping_cart" />
+                app:srcCompat="@drawable/ic_shopping_cart"
+                tools:ignore="VectorDrawableCompat" />
 
 
             <TextView
@@ -67,10 +63,4 @@
                 android:src="@drawable/ic_baseline_close_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </GridView>
-=======
-        app:layout_constraintBottom_toBottomOf="parent" />
-
-
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
 </androidx.constraintlayout.widget.ConstraintLayout>

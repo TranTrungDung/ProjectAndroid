@@ -48,16 +48,10 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS storage_product(id_str INTEGER PRIMARY KEY AUTOINCREMENT  ,id_product INTEGER,size CHAR(10),amount INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS bill(id_bill INTEGER PRIMARY KEY AUTOINCREMENT,id INTEGER,date DATE,sum INTEGER,pay INTEGER,FOREIGN KEY (id) REFERENCES user(id))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_pr INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_pr) REFERENCES product(id),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
-<<<<<<< HEAD
 
-        //chendulieu
-
-
-=======
-//
 //        chendulieu
 //
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
+
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(1,3,750000,'BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.pololove+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(3,3,800000,'HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.polobaroque+"')");
@@ -102,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
 
 //
 
-<<<<<<< HEAD
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'XL','STRIPLE POLO','98% Cotton, 2% Spandex DTG Print',2,'"+R.drawable.polohermes+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'M','TEDDY POLO ','98% Cotton, 2% Spandex Suede leather',2,'"+R.drawable.poloteddy+"')");
   //      baiHocHelper.QueryData("INSERT INTO product VALUES(null,53,800000,'M','TEDDY POLO ','98% Cotton, 2% Spandex DTG Print',2,'"+R.drawable.polobaroque+"')");
@@ -122,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
 
         //xoadulieu
 //baiHocHelper.QueryData("DELETE FROM product");
-=======
+
 //        //xoadulieu
 //        baiHocHelper.QueryData("DELETE FROM product");
 //        baiHocHelper.QueryData("DELETE FROM storage_product");
->>>>>>> 7b163b7fdcfa73e4f8d83d123123df5764508c52
+
         // Khong xoa
 //   baiHocHelper.QueryData("DELETE FROM user");
 //      baiHocHelper.QueryData("DELETE FROM category");
