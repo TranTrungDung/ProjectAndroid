@@ -18,7 +18,6 @@
         android:background="@color/white"
         android:columnWidth="160dp"
         android:numColumns="auto_fit"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -35,17 +34,13 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:background="@drawable/ic_shopping_cart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.957"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.803"
-
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
@@ -85,19 +80,9 @@
             android:id="@+id/bag"
             android:layout_width="31dp"
             android:layout_height="24dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
             android:background="@drawable/red"
-            android:text="0"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="18dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.238" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
