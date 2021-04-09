@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,6 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +48,12 @@ public class showproduct extends AppCompatActivity {
     BaiHocAdapter adapter;
     Button button;
     TextView bag;
+<<<<<<< HEAD
     SharedPreferences sharedpreferences,sharedPreferences1;
+=======
+    ImageView Bag;
+    SharedPreferences sharedpreferences;
+>>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
     ProgressDialog progressDialog;
     String allcategory;
     int t;
@@ -168,6 +175,22 @@ public class showproduct extends AppCompatActivity {
         t = taskList.size();
             String s=String.valueOf(t);
             bag.setText(s);
+<<<<<<< HEAD
+=======
+        }
+        Bag =(ImageView)findViewById(R.id.Bag);
+        Bag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bag = new Intent(showproduct.this,bill.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("category",allcategory);
+                bag.putExtra("data",bundle);
+                finish();
+                startActivity(bag);
+            }
+        });
+>>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
 
     }
     @Override
