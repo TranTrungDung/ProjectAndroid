@@ -33,7 +33,7 @@ public class detailPro extends AppCompatActivity {
     public static final String Name = "nameKey";
     public static final String Pass = "pass";
     TextView name1,price,detail;
-    ImageView img;
+    ImageView img,bill2;
     ImageButton btnimg;
     Button addbag,test;
     int id;
@@ -110,6 +110,18 @@ public class detailPro extends AppCompatActivity {
                     editor.remove("pro");
                     editor.apply();
                     Toast.makeText(detailPro.this,"ok",Toast.LENGTH_LONG).show();
+                }
+            });
+            bill2 = (ImageView) findViewById(R.id.bill2);
+            bill2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent1 = new Intent(detailPro.this,bill.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("category", all);
+                    intent1.putExtra("data", bundle);
+                    finish();
+                    startActivity(intent1);
                 }
             });
             bag = (TextView) findViewById(R.id.bag) ;
