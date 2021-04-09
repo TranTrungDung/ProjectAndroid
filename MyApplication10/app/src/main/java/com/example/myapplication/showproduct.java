@@ -48,12 +48,7 @@ public class showproduct extends AppCompatActivity {
     BaiHocAdapter adapter;
     Button button;
     TextView bag;
-<<<<<<< HEAD
-    SharedPreferences sharedpreferences,sharedPreferences1;
-=======
     ImageView Bag;
-    SharedPreferences sharedpreferences;
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
     ProgressDialog progressDialog;
     String allcategory;
     int t;
@@ -175,9 +170,7 @@ public class showproduct extends AppCompatActivity {
         t = taskList.size();
             String s=String.valueOf(t);
             bag.setText(s);
-<<<<<<< HEAD
-=======
-        }
+
         Bag =(ImageView)findViewById(R.id.Bag);
         Bag.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -190,8 +183,6 @@ public class showproduct extends AppCompatActivity {
                 startActivity(bag);
             }
         });
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
-
     }
     @Override
     public void onBackPressed()

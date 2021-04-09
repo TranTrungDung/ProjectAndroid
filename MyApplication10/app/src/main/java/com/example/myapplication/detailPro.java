@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-<<<<<<< HEAD
-=======
+
 import android.database.Cursor;
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
+
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -18,7 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-<<<<<<< HEAD
+
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -27,9 +26,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-=======
 import android.widget.Toolbar;
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
 
 public class detailPro extends AppCompatActivity {
     public static final String MyPREFERENCES = "user";
@@ -38,18 +35,15 @@ public class detailPro extends AppCompatActivity {
     TextView name1,price,detail;
     ImageView img;
     ImageButton btnimg;
-<<<<<<< HEAD
     Button addbag,test;
     int id;
     public static final String LIST_KEY = "BAG";
     public static final String product= "pro";
     SharedPreferences sharedpreferences;
     private List<baihoc> taskList;
-=======
     BaiHocHelper baiHocHelper;
-    SharedPreferences sharedpreferences;
     TextView bag;
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
+    int t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +53,7 @@ public class detailPro extends AppCompatActivity {
 
         if (taskList == null){
             taskList = new ArrayList<>();}
-
-
-        name1 = (TextView) findViewById(R.id.name1);
-<<<<<<< HEAD
+            name1 = (TextView) findViewById(R.id.name1);
             price = (TextView) findViewById(R.id.pricee);
             detail = (TextView) findViewById(R.id.detail);
             img = (ImageView) findViewById(R.id.img);
@@ -121,54 +112,10 @@ public class detailPro extends AppCompatActivity {
                     Toast.makeText(detailPro.this,"ok",Toast.LENGTH_LONG).show();
                 }
             });
+            bag = (TextView) findViewById(R.id.bag) ;
+        t = taskList.size();
+        String s=String.valueOf(t);
+        bag.setText(s);
         }
 
     }
-=======
-        price = (TextView) findViewById(R.id.pricee) ;
-        detail = (TextView) findViewById(R.id.detail);
-        img = (ImageView) findViewById(R.id.img);
-        Intent intent = getIntent();
-        Bundle bundle = intent.getBundleExtra("data");
-        String all = bundle.getString("category");
-        String ten = bundle.getString("name");
-        String gia = bundle.getString("price");
-        String mota = bundle.getString("detail");
-        img.setImageResource(bundle.getInt("img"));
-        name1.setText(ten);
-        price.setText(gia);
-        detail.setText(mota);
-        bag = (TextView) findViewById(R.id.bag);
-        baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
-        sharedpreferences = detailPro.this.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        String name2 = sharedpreferences.getString("nameKey","");
-        if(name2.isEmpty()){
-            Toast.makeText(detailPro.this,"khong",Toast.LENGTH_LONG).show();
-        }
-        else {
-            int id = 0;
-            Cursor data = baiHocHelper.GetData("SELECT amount FROM details_bill,bill,user WHERE details_bill.id_bill = bill.id_bill AND bill.id = user.id AND username = '"+name2+"' ");
-            while(data.moveToNext()) {
-                id = id + data.getInt(0);
-
-            }
-
-            String s=String.valueOf(id);
-            bag.setText(s);
-        }
-        btnimg = (ImageButton) findViewById(R.id.imgClose);
-        btnimg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1 = new Intent(detailPro.this,showproduct.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("category",all);
-                intent1.putExtra("data",bundle);
-                finish();
-                startActivity(intent1);
-
-            }
-        });
-    }
-}
->>>>>>> 9eaca4bb0544807d5212f6f7fb67b76f151148b2
