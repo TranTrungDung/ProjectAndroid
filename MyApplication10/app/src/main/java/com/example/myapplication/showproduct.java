@@ -26,26 +26,41 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class showproduct extends AppCompatActivity {
     public static final String MyPREFERENCES = "user";
     public static final String Name = "nameKey";
     public static final String Pass = "pass";
+    public static final String LIST_KEY = "BAG";
+    public static final String product= "pro";
+    private List<baihoc> taskList;
     BaiHocHelper baiHocHelper;
     ArrayList<baihoc>arrayList;
     GridView lv;
     BaiHocAdapter adapter;
     Button button;
     TextView bag;
-    SharedPreferences sharedpreferences;
+    SharedPreferences sharedpreferences,sharedPreferences1;
     ProgressDialog progressDialog;
     String allcategory;
+    int t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_showproduct);
         //tao database
+        taskList = PrefConfig.readListFromPref(this);
+
+        if (taskList == null) {
+            taskList = new ArrayList<>();
+            t = 0;
+        }
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
         lv = (GridView) findViewById(R.id.lv);
         arrayList = new ArrayList<>();
@@ -129,6 +144,7 @@ public class showproduct extends AppCompatActivity {
                 Intent intent = new Intent(showproduct.this,detailPro.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("category",allcategory);
+                bundle.putInt("id",arrayList.get(position).getId_pr());
                 bundle.putString("name",arrayList.get(position).getName());
                 bundle.putString("price",arrayList.get(position).getPrice());
                 bundle.putString("detail",arrayList.get(position).getDetails());
@@ -148,25 +164,10 @@ public class showproduct extends AppCompatActivity {
                 finish();
             }
         });
-
-        sharedpreferences = showproduct.this.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        String name1 = sharedpreferences.getString("nameKey","");
         bag = (TextView) findViewById(R.id.bag);
-        if(name1.isEmpty()){
-            Toast.makeText(showproduct.this,"khong",Toast.LENGTH_LONG).show();
-        }
-        else {
-            int id = 0;
-            Cursor data = baiHocHelper.GetData("SELECT amount FROM details_bill,bill,user WHERE details_bill.id_bill = bill.id_bill AND bill.id = user.id AND username = '"+name1+"' ");
-            while(data.moveToNext()) {
-                id = id + data.getInt(0);
-
-            }
-
-            String s=String.valueOf(id);
+        t = taskList.size();
+            String s=String.valueOf(t);
             bag.setText(s);
-        }
-
 
     }
     @Override

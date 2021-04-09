@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class BaiHocAdapter extends BaseAdapter {
@@ -19,6 +21,7 @@ public class BaiHocAdapter extends BaseAdapter {
         this.context = context;
         Layout = layout;
         this.baihocList = baihocList;
+        Collections.reverse((baihocList));
     }
 
     @Override

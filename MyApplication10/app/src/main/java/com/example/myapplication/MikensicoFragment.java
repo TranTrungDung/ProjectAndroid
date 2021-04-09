@@ -35,8 +35,6 @@ public class MikensicoFragment extends Fragment {
     Button btnLogout;
     TextView username;
     private BaiHocHelper baihocHelper;
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -101,7 +99,6 @@ public class MikensicoFragment extends Fragment {
                             .setCancelable(false)
                             .setPositiveButton("Có",new DialogInterface.OnClickListener()  {
                                 public void onClick(DialogInterface dialog, int id) {
-
                                      SharedPreferences.Editor editor = sharedpreferences.edit();
                                      editor.clear();
                                      editor.apply();

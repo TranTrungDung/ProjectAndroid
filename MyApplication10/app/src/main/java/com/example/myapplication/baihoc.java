@@ -2,7 +2,9 @@ package com.example.myapplication;
 
 import android.icu.text.TimeZoneFormat;
 
-public class baihoc {
+import java.io.Serializable;
+
+public class baihoc implements Serializable {
     private int id_pr;
     private String price;
     private String name;
@@ -20,15 +22,11 @@ public class baihoc {
         this.id_pr = id_pr;
     }
 
-    public String getPrice() { return price;
-    }
+    public String getPrice() { return price; }
 
     public void setPrice(String price) {
         this.price = price;
     }
-
-
-
 
     public String getName() {
         return name;
