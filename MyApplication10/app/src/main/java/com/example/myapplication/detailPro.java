@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class detailPro extends AppCompatActivity {
     ImageView img,bill2;
     ImageButton btnimg;
     Button addbag,test;
+    NumberPicker nbpick;
     int id;
     private List<baihoc> taskList;
     public static final String LIST_KEY = "BAG";
@@ -45,7 +47,7 @@ public class detailPro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ArrayList<String> arrPackage;
         setContentView(R.layout.activity_detail_pro);
-
+        NumberPicker();
         taskList = PrefConfig.readListFromPref(this);
 
         if (taskList == null){
@@ -126,5 +128,16 @@ public class detailPro extends AppCompatActivity {
         String s=String.valueOf(t);
         bag.setText(s);
         }
+        public void NumberPicker(){
+        nbpick = (NumberPicker)findViewById(R.id.nbpicker);
+        nbpick.setMaxValue(10);
+        nbpick.setMinValue(1);
+        nbpick.setValue(1);
+        nbpick.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 
+            }
+        });
+        }
     }
