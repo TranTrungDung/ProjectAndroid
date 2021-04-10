@@ -108,10 +108,10 @@
             android:textColor="#000000"
             android:textSize="15dp"
             app:layout_constraintBottom_toTopOf="@+id/text_ship"
-            app:layout_constraintStart_toEndOf="@+id/textView14" />
+            app:layout_constraintStart_toEndOf="@+id/sl" />
 
         <TextView
-            android:id="@+id/text_price"
+            android:id="@+id/pricesum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="@+id/button6" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/sl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
@@ -162,7 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/text_price"
+        app:layout_constraintBottom_toTopOf="@+id/pricesum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,7 +12,20 @@ public class baihoc implements Serializable {
     private int image;
 
 
+    private String size;
+    private int amount;
 
+    public int getAmount() { return amount; }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public void setAmount(int amount) { this.amount = amount; }
 
     public int getId_pr() {
         return id_pr;
@@ -52,11 +65,13 @@ public class baihoc implements Serializable {
         this.image = image;
     }
 
-    public baihoc(int id_pr, String price,  String name, String details,  int image) {
+    public baihoc(int id_pr, String price,  String name, String details,  int image,int amount,String size) {
         this.id_pr = id_pr;
         this.price = price;
         this.name = name;
         this.details = details;
         this.image = image;
+        this.amount = amount;
+        this.size = size;
     }
 }

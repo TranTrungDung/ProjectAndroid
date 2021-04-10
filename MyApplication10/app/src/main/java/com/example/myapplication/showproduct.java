@@ -65,7 +65,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
 
             }
         }
@@ -78,7 +80,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
         else if(nam.equals("SWEATERS")){
@@ -90,7 +94,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
         else if(nam.equals("T-SHIRTS")){
@@ -102,7 +108,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }else{
             allcategory = "PANTS";
@@ -113,7 +121,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
 
@@ -153,8 +163,13 @@ public class showproduct extends AppCompatActivity {
         });
         bag = (TextView) findViewById(R.id.bag);
         t = taskList.size();
-            String s=String.valueOf(t);
-            bag.setText(s);
+        int k = 0,sum = 0;
+        for(int h = 0; h < t ; h++ ) {
+            k = taskList.get(h).getAmount();
+            sum += k;
+        }
+        String s=String.valueOf(sum);
+        bag.setText(s);
 
         Bag =(ImageView)findViewById(R.id.Bag);
         Bag.setOnClickListener(new View.OnClickListener() {

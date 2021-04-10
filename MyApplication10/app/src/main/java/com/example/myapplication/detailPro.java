@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -20,6 +21,10 @@ import android.widget.Toast;
 
 
 import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,6 +39,7 @@ public class detailPro extends AppCompatActivity {
     ImageButton btnimg;
     Button addbag,test;
     NumberPicker nbpick;
+    EditText size;
     int id;
     private List<baihoc> taskList;
     public static final String LIST_KEY = "BAG";
@@ -48,6 +54,8 @@ public class detailPro extends AppCompatActivity {
         final ArrayList<String> arrPackage;
         setContentView(R.layout.activity_detail_pro);
         NumberPicker();
+        nbpick = (NumberPicker)findViewById(R.id.nbpicker);
+        size = (EditText) findViewById(R.id.sizeproduct);
         taskList = PrefConfig.readListFromPref(this);
 
         if (taskList == null){
@@ -73,7 +81,7 @@ public class detailPro extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(detailPro.this, "luu xong", Toast.LENGTH_LONG).show();
-                    baihoc baihoc1 = new baihoc(id,price.getText().toString(),name1.getText().toString(),detail.getText().toString(),bundle.getInt("img"));
+                    baihoc baihoc1 = new baihoc(id,price.getText().toString(),name1.getText().toString(),detail.getText().toString(),bundle.getInt("img"),nbpick.getValue(),size.getText().toString());
                     taskList.add(baihoc1);
                     PrefConfig.writeListInPref(getApplicationContext(), taskList);
                     Collections.reverse(taskList);
@@ -106,9 +114,10 @@ public class detailPro extends AppCompatActivity {
                     Gson gson = new Gson();
                     String jsonString = pref.getString(product, "");
                     SharedPreferences.Editor editor = pref.edit();
-                    editor.remove("pro");
-                    editor.apply();
-                    Toast.makeText(detailPro.this,"ok",Toast.LENGTH_LONG).show();
+                    int a = taskList.get(0).getId_pr();
+                    PrefConfig.writeListInPref(getApplicationContext(), taskList);
+                    Collections.reverse(taskList);
+                    Toast.makeText(detailPro.this,""+a,Toast.LENGTH_LONG).show();
                 }
             });
             bill2 = (ImageView) findViewById(R.id.bill2);
@@ -125,7 +134,12 @@ public class detailPro extends AppCompatActivity {
             });
             bag = (TextView) findViewById(R.id.bag) ;
         t = taskList.size();
-        String s=String.valueOf(t);
+        int k = 0,sum = 0;
+        for(int h = 0; h < t ; h++ ) {
+            k = taskList.get(h).getAmount();
+            sum += k;
+        }
+        String s=String.valueOf(sum);
         bag.setText(s);
         }
         public void NumberPicker(){
@@ -140,4 +154,5 @@ public class detailPro extends AppCompatActivity {
             }
         });
         }
+
     }
