@@ -33,6 +33,9 @@ public class bill extends AppCompatActivity {
 
         if (taskList == null)
             taskList = new ArrayList<>();
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
         billadapter adapter = new billadapter(getApplicationContext(), taskList);
         recyclerView.setAdapter(adapter);
         imgClose.setOnClickListener(new View.OnClickListener() {
