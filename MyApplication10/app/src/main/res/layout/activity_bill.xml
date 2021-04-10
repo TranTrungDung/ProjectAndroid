@@ -66,9 +66,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
 
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerview"
         app:layout_constraintVertical_bias="0.899" />
+
+       
+
 
     <TextView
         android:id="@+id/text_total"
@@ -150,14 +154,20 @@
             app:layout_constraintStart_toStartOf="@+id/text_ship" />
 
 
-        <androidx.recyclerview.widget.RecyclerView
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:layout_below="@+id/linearLayout"
+        android:layout_height="535dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_price"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
