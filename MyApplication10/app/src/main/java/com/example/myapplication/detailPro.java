@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +15,7 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,10 +40,10 @@ public class detailPro extends AppCompatActivity {
     ImageButton btnimg;
     Button addbag,test;
     int id;
+    private List<baihoc> taskList;
     public static final String LIST_KEY = "BAG";
     public static final String product= "pro";
     SharedPreferences sharedpreferences;
-    private List<baihoc> taskList;
     BaiHocHelper baiHocHelper;
     TextView bag;
     int t;
@@ -49,6 +52,7 @@ public class detailPro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ArrayList<String> arrPackage;
         setContentView(R.layout.activity_detail_pro);
+
         taskList = PrefConfig.readListFromPref(this);
 
         if (taskList == null){
@@ -70,7 +74,7 @@ public class detailPro extends AppCompatActivity {
             detail.setText(mota);
             String id1 = String.valueOf(id);
             addbag = (Button) findViewById(R.id.addbag);
-            addbag.setOnClickListener(new View.OnClickListener() {
+            addbag.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(detailPro.this, "luu xong", Toast.LENGTH_LONG).show();

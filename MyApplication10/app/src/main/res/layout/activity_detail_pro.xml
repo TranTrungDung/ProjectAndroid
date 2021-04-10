@@ -94,7 +94,6 @@
         android:id="@+id/addbag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="15dp"
         android:background="@color/cardview_dark_background"
         android:text="Add product"
@@ -165,54 +164,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:srcCompat="@drawable/caiquan" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="44dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:text="S"
-        app:backgroundTint="#0E0101"
-        app:iconTint="#230F0F"
-        app:layout_constraintBottom_toTopOf="@+id/addbag"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pricee"
-        app:layout_constraintVertical_bias="0.363" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="44dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="M"
-        app:backgroundTint="#150707"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button4" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="44dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="L"
-        app:backgroundTint="#100101"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="52dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:text="XL"
-        app:backgroundTint="#100202"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
-
     <TextView
         android:id="@+id/abc"
         android:layout_width="wrap_content"
@@ -245,5 +196,17 @@
         app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addbag"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
