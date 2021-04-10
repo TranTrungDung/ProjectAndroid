@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,8 +11,10 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +33,12 @@ public class detailPro extends AppCompatActivity {
     ImageView img,bill2;
     ImageButton btnimg;
     Button addbag,test;
+    NumberPicker nbpick;
     int id;
+    private List<baihoc> taskList;
     public static final String LIST_KEY = "BAG";
     public static final String product= "pro";
     SharedPreferences sharedpreferences;
-    private List<baihoc> taskList;
     BaiHocHelper baiHocHelper;
     TextView bag;
     int t;
@@ -42,6 +47,7 @@ public class detailPro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ArrayList<String> arrPackage;
         setContentView(R.layout.activity_detail_pro);
+        NumberPicker();
         taskList = PrefConfig.readListFromPref(this);
 
         if (taskList == null){
@@ -63,7 +69,7 @@ public class detailPro extends AppCompatActivity {
             detail.setText(mota);
             String id1 = String.valueOf(id);
             addbag = (Button) findViewById(R.id.addbag);
-            addbag.setOnClickListener(new View.OnClickListener() {
+            addbag.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(detailPro.this, "luu xong", Toast.LENGTH_LONG).show();
@@ -122,5 +128,16 @@ public class detailPro extends AppCompatActivity {
         String s=String.valueOf(t);
         bag.setText(s);
         }
+        public void NumberPicker(){
+        nbpick = (NumberPicker)findViewById(R.id.nbpicker);
+        nbpick.setMaxValue(10);
+        nbpick.setMinValue(1);
+        nbpick.setValue(1);
+        nbpick.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
 
+            }
+        });
+        }
     }
