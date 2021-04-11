@@ -1,18 +1,16 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class bill extends AppCompatActivity {
+    public static final String MyPREFERENCES = "user";
+    public static final String Name = "nameKey";
+    public static final String Pass = "pass";
+    SharedPreferences sharedpreferences;
     private static List<baihoc> taskList;
     ImageButton imgClose;
     Button delete,next;
@@ -38,7 +40,7 @@ public class bill extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
         String all = bundle.getString("category");
-        imgClose = (ImageButton) findViewById(R.id.imgClose);
+        imgClose = (ImageButton) findViewById(R.id.imgClose1);
         sl = (TextView) findViewById(R.id.sl);
         pricesum = (TextView) findViewById(R.id.pricesum);
         sumsum = (TextView) findViewById(R.id.sumsum);
@@ -63,12 +65,23 @@ public class bill extends AppCompatActivity {
         });
     }
     private void BtnNext(){
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("data");
+        String all = bundle.getString("category");
         next = (Button) findViewById(R.id.btnNext);
+        sharedpreferences =getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        String name = sharedpreferences.getString("nameKey","");
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(bill.this,payments.class);
-                startActivity(intent);
+                if(name == ""){
+                    Toast.makeText(bill.this,"ddawng nhap ddi",Toast.LENGTH_LONG).show();
+                }else{
+                Intent intent1 = new Intent(bill.this,payments.class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putString("category",all);
+                intent1.putExtra("data",bundle);
+                startActivity(intent1);}
             }
         });
     }

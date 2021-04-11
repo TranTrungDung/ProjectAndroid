@@ -70,10 +70,10 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(4,'PANTS')");
 //
 //         //Bảng lưu trữ (id =1)
-//          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','S','50')");
-//          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
-//          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
-//          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
+//         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','S','50')");
+//         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
+//         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
+//         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
 
 //        //Bảng lưu trữ (id =2)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','S','50')");
