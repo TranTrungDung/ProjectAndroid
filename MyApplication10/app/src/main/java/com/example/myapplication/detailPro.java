@@ -10,12 +10,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,8 +40,8 @@ public class detailPro extends AppCompatActivity {
     ImageView img,bill2;
     ImageButton btnimg;
     Button addbag,test;
-    NumberPicker nbpick;
-    EditText size;
+    Spinner nbpick;
+    Spinner size;
     int id;
     private List<baihoc> taskList;
     public static final String LIST_KEY = "BAG";
@@ -53,9 +55,8 @@ public class detailPro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ArrayList<String> arrPackage;
         setContentView(R.layout.activity_detail_pro);
-        NumberPicker();
-        nbpick = (NumberPicker)findViewById(R.id.nbpicker);
-        size = (EditText) findViewById(R.id.sizeproduct);
+        nbpick = (Spinner) findViewById(R.id.npicker);
+        size = (Spinner) findViewById(R.id.sizeproduct);
         taskList = PrefConfig.readListFromPref(this);
 
         if (taskList == null){
@@ -75,13 +76,17 @@ public class detailPro extends AppCompatActivity {
             name1.setText(ten);
             price.setText(gia);
             detail.setText(mota);
+            amount();
+            size();
             String id1 = String.valueOf(id);
             addbag = (Button) findViewById(R.id.addbag);
             addbag.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
+                    int sol = Integer.parseInt(nbpick.getSelectedItem().toString());
+                    String sizee = size.getSelectedItem().toString();
                     Toast.makeText(detailPro.this, "luu xong", Toast.LENGTH_LONG).show();
-                    baihoc baihoc1 = new baihoc(id,price.getText().toString(),name1.getText().toString(),detail.getText().toString(),bundle.getInt("img"),nbpick.getValue(),size.getText().toString());
+                    baihoc baihoc1 = new baihoc(id,price.getText().toString(),name1.getText().toString(),detail.getText().toString(),bundle.getInt("img"),sol,sizee);
                     taskList.add(baihoc1);
                     PrefConfig.writeListInPref(getApplicationContext(), taskList);
                     Collections.reverse(taskList);
@@ -141,6 +146,7 @@ public class detailPro extends AppCompatActivity {
         }
         String s=String.valueOf(sum);
         bag.setText(s);
+<<<<<<< HEAD
         }
         public void NumberPicker(){
         nbpick = (NumberPicker)findViewById(R.id.nbpicker);
@@ -152,6 +158,18 @@ public class detailPro extends AppCompatActivity {
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
             }
         });
-        }
+=======
 
+>>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
+        }
+    private  void amount (){
+        Integer[] integers = new Integer[]{1,2,3,4,5,6,7,8,9,10};
+        ArrayAdapter<Integer> arrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_dropdown_item,integers);
+        nbpick.setAdapter(arrayAdapter);
+    }
+    private  void size (){
+        String[] strings = new String[]{"S","M","L","XL"};
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,strings);
+        size.setAdapter(arrayAdapter);
+    }
     }

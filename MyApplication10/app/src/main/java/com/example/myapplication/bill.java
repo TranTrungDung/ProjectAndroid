@@ -5,24 +5,36 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class bill extends AppCompatActivity {
+    private static List<baihoc> taskList;
     ImageButton imgClose;
+<<<<<<< HEAD
     Button delete,next;
     TextView sl,pricesum;
 
     private List<baihoc> taskList;
+=======
+    Button delete;
+    static TextView sl;
+    static TextView pricesum;
+    static TextView sumsum;
+    static TextView ship;
+>>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,24 +46,11 @@ public class bill extends AppCompatActivity {
         String all = bundle.getString("category");
         imgClose = (ImageButton) findViewById(R.id.imgClose);
         sl = (TextView) findViewById(R.id.sl);
-        taskList = PrefConfig.readListFromPref(this);
-        if (taskList == null) {
-            taskList = new ArrayList<>();
-        }
-        int t = taskList.size();
-
-        int sumpro = 0, k = 0, j = 0,sum = 0,g = 0;
-        for(int h = 0; h < t ; h++ ){
-            k = taskList.get(h).getAmount();
-            j = Integer.parseInt(taskList.get(h).getPrice());
-            g = k * j;
-            sum += k;
-            sumpro += g;
-        }
-        String s=String.valueOf(sum);
-        sl.setText(s);
         pricesum = (TextView) findViewById(R.id.pricesum);
-        pricesum.setText(String.valueOf(sumpro));
+        sumsum = (TextView) findViewById(R.id.sumsum);
+        ship = (TextView) findViewById(R.id.ship);
+        taskList = PrefConfig.readListFromPref(this);
+        tongtien();
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
@@ -69,6 +68,7 @@ public class bill extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
     private void BtnNext(){
         next = (Button) findViewById(R.id.btnNext);
         next.setOnClickListener(new View.OnClickListener() {
@@ -79,4 +79,36 @@ public class bill extends AppCompatActivity {
             }
         });
     }
+=======
+    public static void tongtien(){
+        if (taskList == null) {
+            taskList = new ArrayList<>();
+        }
+        int t = taskList.size();
+
+        int sumpro = 0, k = 0, j = 0,sum = 0,g = 0,ship1 = 0;
+        for(int h = 0; h < t ; h++ ){
+            k = taskList.get(h).getAmount();
+            j = Integer.parseInt(taskList.get(h).getPrice());
+            g = k * j;
+            sum += k;
+            sumpro += g;
+        }
+        String s=String.valueOf(sum);
+        sl.setText(s);
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        pricesum.setText(decimalFormat.format(sumpro));
+        if(t == 0){
+            ship1 = 0;
+            ship.setText(String.valueOf(ship1));
+        }else{
+        ship1 = Integer.parseInt(ship.getText().toString());
+        }
+        int sumsum1 = ship1 + sumpro;
+        String sumsun11 = String.valueOf(sumsum1);
+        sumsum.setText(sumsun11);
+    }
+
+
+>>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
 }
