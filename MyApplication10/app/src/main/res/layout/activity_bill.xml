@@ -65,11 +65,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
-        app:layout_constraintVertical_bias="0.899" />
-
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <TextView
@@ -84,83 +80,88 @@
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintStart_toStartOf="@+id/btnNext" />
 
-        <TextView
-            android:id="@+id/text_ship"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="Shipping"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_total"
-            app:layout_constraintStart_toStartOf="@+id/text_total" />
+    <TextView
+        android:id="@+id/text_ship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Shipping"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_total"
+        app:layout_constraintStart_toStartOf="@+id/text_total"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintVertical_bias="0.994" />
 
-        <TextView
-            android:id="@+id/text_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginLeft="3dp"
-            android:layout_marginBottom="15dp"
-            android:text="item"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_ship"
-            app:layout_constraintStart_toEndOf="@+id/sl" />
+    <TextView
+        android:id="@+id/text_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="15dp"
+        android:text="item"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_ship"
+        app:layout_constraintStart_toEndOf="@+id/sl" />
 
-        <TextView
-            android:id="@+id/pricesum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="800000"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/ship"
-            app:layout_constraintEnd_toEndOf="@+id/ship" />
+    <TextView
+        android:id="@+id/pricesum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/ship"
+        app:layout_constraintEnd_toEndOf="@+id/ship" />
 
-        <TextView
-            android:id="@+id/ship"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="30000"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/sumsum"
-            app:layout_constraintEnd_toEndOf="@+id/sumsum" />
+    <TextView
+        android:id="@+id/ship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="0"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/sumsum"
+        app:layout_constraintEnd_toEndOf="@+id/sumsum"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintVertical_bias="0.994" />
 
     <TextView
         android:id="@+id/sumsum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"
-        android:text="830000"
+        android:text="0"
         android:textColor="#000000"
         android:textSize="15dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnNext"
-        app:layout_constraintEnd_toEndOf="@+id/btnNext" />
+        app:layout_constraintEnd_toEndOf="@+id/btnNext"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintVertical_bias="1.0" />
 
-        <TextView
-            android:id="@+id/sl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:text="1"
-            android:textColor="#000000"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_ship"
-            app:layout_constraintStart_toStartOf="@+id/text_ship" />
+    <TextView
+        android:id="@+id/sl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="1"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_ship"
+        app:layout_constraintStart_toStartOf="@+id/text_ship" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/pricesum"
+        android:layout_height="450dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.007" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

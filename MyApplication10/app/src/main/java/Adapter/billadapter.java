@@ -1,8 +1,6 @@
-package com.example.myapplication;
+package Adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
+import com.example.myapplication.PrefConfig;
+import com.example.myapplication.R;
+import com.example.myapplication.baihoc;
+import com.example.myapplication.bill;
 
-import java.text.BreakIterator;
-import java.text.DecimalFormat;
 import java.util.Collections;
 import java.util.List;
 

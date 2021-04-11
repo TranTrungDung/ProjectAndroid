@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
-import android.preference.PreferenceManager;
+import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,8 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
 
+=======
+>>>>>>> 4f95179ff392ad76783f6ba6749b76f4d4e3231d
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -30,7 +33,7 @@ public class detailPro extends AppCompatActivity {
     TextView name1,price,detail;
     ImageView img,bill2;
     ImageButton btnimg;
-    Button addbag,test;
+    Button addbag;
     Spinner nbpick;
     Spinner size;
     int id;
@@ -71,12 +74,13 @@ public class detailPro extends AppCompatActivity {
             size();
             String id1 = String.valueOf(id);
             addbag = (Button) findViewById(R.id.addbag);
+//             final Check check = new Check(detailPro.this);
             addbag.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     int sol = Integer.parseInt(nbpick.getSelectedItem().toString());
+                    Toast.makeText(detailPro.this,"Add Success",Toast.LENGTH_LONG).show();
                     String sizee = size.getSelectedItem().toString();
-                    Toast.makeText(detailPro.this, "luu xong", Toast.LENGTH_LONG).show();
                     baihoc baihoc1 = new baihoc(id,price.getText().toString(),name1.getText().toString(),detail.getText().toString(),bundle.getInt("img"),sol,sizee);
                     taskList.add(baihoc1);
                     PrefConfig.writeListInPref(getApplicationContext(), taskList);
@@ -88,7 +92,6 @@ public class detailPro extends AppCompatActivity {
                     intent1.putExtra("data", bundle);
                     finish();
                     startActivity(intent1);
-
                 }
             });
             btnimg = (ImageButton) findViewById(R.id.imgClose1);
@@ -101,20 +104,6 @@ public class detailPro extends AppCompatActivity {
                     intent1.putExtra("data", bundle);
                     finish();
                     startActivity(intent1);
-                }
-            });
-            test = (Button) findViewById(R.id.test);
-            test.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(detailPro.this);
-                    Gson gson = new Gson();
-                    String jsonString = pref.getString(product, "");
-                    SharedPreferences.Editor editor = pref.edit();
-                    int a = taskList.get(0).getId_pr();
-                    PrefConfig.writeListInPref(getApplicationContext(), taskList);
-                    Collections.reverse(taskList);
-                    Toast.makeText(detailPro.this,""+a,Toast.LENGTH_LONG).show();
                 }
             });
             bill2 = (ImageView) findViewById(R.id.bill2);
