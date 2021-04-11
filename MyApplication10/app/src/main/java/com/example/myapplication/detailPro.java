@@ -150,7 +150,6 @@ public class detailPro extends AppCompatActivity {
         nbpick.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-
             }
         });
         }

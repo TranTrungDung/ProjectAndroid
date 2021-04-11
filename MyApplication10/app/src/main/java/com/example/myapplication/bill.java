@@ -19,7 +19,7 @@ import java.util.List;
 
 public class bill extends AppCompatActivity {
     ImageButton imgClose;
-    Button delete;
+    Button delete,next;
     TextView sl,pricesum;
 
     private List<baihoc> taskList;
@@ -27,6 +27,7 @@ public class bill extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
+        BtnNext();
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
@@ -64,6 +65,16 @@ public class bill extends AppCompatActivity {
                 bundle.putString("category",all);
                 intent.putExtra("data",bundle);
                 finish();
+                startActivity(intent);
+            }
+        });
+    }
+    private void BtnNext(){
+        next = (Button) findViewById(R.id.btnNext);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(bill.this,payments.class);
                 startActivity(intent);
             }
         });

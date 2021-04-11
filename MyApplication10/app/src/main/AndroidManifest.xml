@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".bill"></activity>
+        <activity android:name=".payments"></activity>
+        <activity android:name=".bill" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

@@ -112,7 +112,7 @@
         android:layout_marginTop="15dp"
         android:text="Size"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/addbag"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/pricee"
         app:layout_constraintTop_toBottomOf="@+id/pricee" />
@@ -238,7 +238,6 @@
         android:layout_marginBottom="12dp"
         android:text="Amount"
         android:textColor="#000000"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/addbag"
         app:layout_constraintStart_toEndOf="@+id/sizeproduct"
         app:layout_constraintTop_toBottomOf="@+id/pricee"
