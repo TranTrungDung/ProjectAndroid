@@ -16,12 +16,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-<<<<<<< HEAD
 import com.google.gson.Gson;
-=======
 import com.example.myapplication.SQLLite.BaiHocHelper;
 import com.example.myapplication.list.baihoc;
->>>>>>> 34c6e36844d66bdfaf56efae0318a18b7bcc7008
 
 import java.util.ArrayList;
 import java.util.Collections;
