@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
-//
+
 //        //Bảng lưu trữ (id =2)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','S','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','M','50')");
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','M','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','XL','50')");
-//
+
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(1,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(2,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(3,'deodeo@gmail.com','Quynh','12345','0987654321')");
@@ -105,8 +105,5 @@ public class MainActivity extends AppCompatActivity {
         // Khong xoa
 //   baiHocHelper.QueryData("DELETE FROM user");
 //      baiHocHelper.QueryData("DELETE FROM category");
-
-
-
     }
 }

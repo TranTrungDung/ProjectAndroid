@@ -146,21 +146,6 @@ public class detailPro extends AppCompatActivity {
         }
         String s=String.valueOf(sum);
         bag.setText(s);
-<<<<<<< HEAD
-        }
-        public void NumberPicker(){
-        nbpick = (NumberPicker)findViewById(R.id.nbpicker);
-        nbpick.setMaxValue(10);
-        nbpick.setMinValue(1);
-        nbpick.setValue(1);
-        nbpick.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
-            @Override
-            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-            }
-        });
-=======
-
->>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
         }
     private  void amount (){
         Integer[] integers = new Integer[]{1,2,3,4,5,6,7,8,9,10};

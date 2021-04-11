@@ -23,18 +23,12 @@ import java.util.List;
 public class bill extends AppCompatActivity {
     private static List<baihoc> taskList;
     ImageButton imgClose;
-<<<<<<< HEAD
     Button delete,next;
-    TextView sl,pricesum;
-
-    private List<baihoc> taskList;
-=======
-    Button delete;
     static TextView sl;
     static TextView pricesum;
     static TextView sumsum;
     static TextView ship;
->>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +62,6 @@ public class bill extends AppCompatActivity {
             }
         });
     }
-<<<<<<< HEAD
     private void BtnNext(){
         next = (Button) findViewById(R.id.btnNext);
         next.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +72,6 @@ public class bill extends AppCompatActivity {
             }
         });
     }
-=======
     public static void tongtien(){
         if (taskList == null) {
             taskList = new ArrayList<>();
@@ -108,7 +100,4 @@ public class bill extends AppCompatActivity {
         String sumsun11 = String.valueOf(sumsum1);
         sumsum.setText(sumsun11);
     }
-
-
->>>>>>> 4780b99c352e1ff6392918b33b7068bae4e22da7
 }
