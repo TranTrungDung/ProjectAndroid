@@ -14,11 +14,13 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import Adapter.adapter;
+
 
 public class CategoryFragment extends Fragment {
     Button button;
     ListView listView;
-    adapter adapter;
+    Adapter.adapter adapter;
     public CategoryFragment() {
         // Required empty public constructor
     }

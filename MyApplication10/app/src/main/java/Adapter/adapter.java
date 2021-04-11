@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import com.example.myapplication.R;
+import com.example.myapplication.country;
 
 import java.util.ArrayList;
 import java.util.Objects;

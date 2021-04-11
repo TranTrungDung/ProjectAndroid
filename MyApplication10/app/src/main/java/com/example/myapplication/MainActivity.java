@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -60,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(3,3,800000,'HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.polobaroque+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(4,3,700000,'ANGEL DEVIL ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.tshirtangel+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(5,2,855000,'HERMES SWEATER','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.sweaterhermes+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(6,1,122000,'aodep','aodepquadi','"+R.drawable.th2+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(7,4,122000,'aodep','aodepquadi','"+R.drawable.ao2+"')");
+////        baiHocHelper.QueryData("INSERT INTO product VALUES(5,2,855000,'HERMES SWEATER ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.sweaterhermes+"')");
+////        baiHocHelper.QueryData("INSERT INTO product VALUES(6,1,122000,'aodep','aodepquadi','"+R.drawable.th2+"')");
+////        baiHocHelper.QueryData("INSERT INTO product VALUES(7,4,122000,'aodep','aodepquadi','"+R.drawable.ao2+"')");
 //
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(1,'JACKETS')");
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(2,'SWEATERS')");
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
-
+//
 //        //Bảng lưu trữ (id =2)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','S','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','M','50')");
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','M','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','XL','50')");
-
+//
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(1,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(2,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(3,'deodeo@gmail.com','Quynh','12345','0987654321')");
