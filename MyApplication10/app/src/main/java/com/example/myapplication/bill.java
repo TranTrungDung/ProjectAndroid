@@ -1,9 +1,13 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,11 +16,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.myapplication.list.baihoc;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.billadapter;
+import com.example.myapplication.Adapter.billadapter;
 
 public class bill extends AppCompatActivity {
     public static final String MyPREFERENCES = "user";
@@ -75,12 +81,30 @@ public class bill extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(name == ""){
-                    Toast.makeText(bill.this,"ddawng nhap ddi",Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(bill.this);
+// gán tiêu đề cho dialog
+// hiển thị Thông điệp (thông báo) lên dialog
+                    alertDialogBuilder .setMessage("Login please ?")
+                            .setCancelable(false)
+                            .setNegativeButton("Click!!!",new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog,int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    // Tạo alert dialog
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    // Hiển thị dialog
+                    alertDialog.show();
+                    FragmentManager fm = getSupportFragmentManager();
+                    MikensicoFragment fragment = new MikensicoFragment();
+                    fm.beginTransaction().replace(R.id.activity_bill, fragment).commit();
+                    next.setVisibility(View.INVISIBLE);
                 }else{
                 Intent intent1 = new Intent(bill.this,payments.class);
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("category",all);
                 intent1.putExtra("data",bundle);
+                finish();
                 startActivity(intent1);}
             }
         });

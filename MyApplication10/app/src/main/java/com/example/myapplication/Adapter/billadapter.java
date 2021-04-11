@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.myapplication.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 import com.example.myapplication.PrefConfig;
 import com.example.myapplication.R;
-import com.example.myapplication.baihoc;
+import com.example.myapplication.list.baihoc;
 import com.example.myapplication.bill;
 
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.myapplication.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,10 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.myapplication.R;
-import com.example.myapplication.country;
+import com.example.myapplication.list.ListMyOrder;
+import com.example.myapplication.list.country;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class  adapter extends ArrayAdapter<country> {
     Context context;

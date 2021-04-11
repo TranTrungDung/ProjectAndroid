@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.list;
 
 import android.icu.text.TimeZoneFormat;
 

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.myapplication.SQLLite.BaiHocHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -69,19 +70,19 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(4,'PANTS')");
 //
 //         //Bảng lưu trữ (id =1)
-<<<<<<< HEAD
+
 //         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','S','50')");
 //         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
 //         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
 //         baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
 
-=======
+
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','S','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','M','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','L','50')");
 //          baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'1','XL','50')");
 //
->>>>>>> 4f95179ff392ad76783f6ba6749b76f4d4e3231d
+
 //        //Bảng lưu trữ (id =2)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','S','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'2','M','50')");

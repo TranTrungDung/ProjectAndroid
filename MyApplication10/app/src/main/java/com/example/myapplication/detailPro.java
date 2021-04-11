@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -17,7 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
+=======
+import com.example.myapplication.SQLLite.BaiHocHelper;
+import com.example.myapplication.list.baihoc;
+>>>>>>> 34c6e36844d66bdfaf56efae0318a18b7bcc7008
 
 import java.util.ArrayList;
 import java.util.Collections;

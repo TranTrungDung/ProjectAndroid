@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".payments"></activity>
+        <activity android:name=".payments" />
         <activity android:name=".bill" />
 
         <meta-data

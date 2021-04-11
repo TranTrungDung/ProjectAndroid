@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myapplication.SQLLite.BaiHocHelper;
+
 public class MikensicoFragment extends Fragment {
     public static final String MyPREFERENCES = "user";
     public static final String Name = "nameKey";
@@ -30,6 +32,7 @@ public class MikensicoFragment extends Fragment {
     BaiHocHelper baiHocHelper;
     Button btnLogout;
     TextView username;
+    Button myorder;
     private BaiHocHelper baihocHelper;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -81,6 +84,14 @@ public class MikensicoFragment extends Fragment {
 
             sharedpreferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
             view = inflater.inflate(R.layout.fragment_user_screen, container, false);
+            myorder = view.findViewById(R.id.myOrders);
+            myorder.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),my_order.class);
+                    startActivity(intent);
+                }
+            });
             btnlogout = view.findViewById(R.id.btnLogout);
             username  = view.findViewById(R.id.username);
             username.setText(name);
@@ -89,24 +100,23 @@ public class MikensicoFragment extends Fragment {
                 public void onClick(View v) {
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity()  );
 // gán tiêu đề cho dialog
-                    alertDialogBuilder.setTitle("Đăng xuất");
+                    alertDialogBuilder.setTitle("Logout");
 // hiển thị Thông điệp (thông báo) lên dialog
-                    alertDialogBuilder .setMessage("Bạn có muốn đăng xuất không ?")
+                    alertDialogBuilder .setMessage("Do you want to log out ?")
                             .setCancelable(false)
-                            .setPositiveButton("Có",new DialogInterface.OnClickListener()  {
+                            .setPositiveButton("No",new DialogInterface.OnClickListener()  {
                                 public void onClick(DialogInterface dialog, int id) {
-                                     SharedPreferences.Editor editor = sharedpreferences.edit();
-                                     editor.clear();
-                                     editor.apply();
-                                     Intent intent = getActivity().getIntent();
-                                     getActivity().finish();
-                                     startActivity(intent);
-
+                                    dialog.cancel();
                                 }
                             })
-                            .setNegativeButton("Không",new DialogInterface.OnClickListener() {
+                            .setNegativeButton("Yes",new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog,int id) {
-                                    dialog.cancel();
+                                    SharedPreferences.Editor editor = sharedpreferences.edit();
+                                    editor.clear();
+                                    editor.apply();
+                                    Intent intent = getActivity().getIntent();
+                                    getActivity().finish();
+                                    startActivity(intent);
                                 }
                             });
                     // Tạo alert dialog
