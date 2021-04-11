@@ -155,9 +155,6 @@ public class showproduct extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                CategoryFragment fragment = new CategoryFragment();
-                fm.beginTransaction().replace(R.id.show,fragment).commit();
                 finish();
             }
         });

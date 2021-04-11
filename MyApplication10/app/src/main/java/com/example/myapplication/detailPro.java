@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
@@ -97,6 +99,7 @@ public class detailPro extends AppCompatActivity {
                     intent1.putExtra("data", bundle);
                     finish();
                     startActivity(intent1);
+
                 }
             });
             btnimg = (ImageButton) findViewById(R.id.imgClose);
@@ -156,5 +159,5 @@ public class detailPro extends AppCompatActivity {
         String[] strings = new String[]{"S","M","L","XL"};
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,strings);
         size.setAdapter(arrayAdapter);
-    }
-    }
+    }}
+
