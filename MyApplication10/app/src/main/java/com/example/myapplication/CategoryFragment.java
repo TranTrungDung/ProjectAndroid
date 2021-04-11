@@ -12,15 +12,17 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.myapplication.list.country;
+
 import java.util.ArrayList;
 
-import Adapter.adapter;
+import com.example.myapplication.Adapter.adapter;
 
 
 public class CategoryFragment extends Fragment {
     Button button;
     ListView listView;
-    Adapter.adapter adapter;
+    com.example.myapplication.Adapter.adapter adapter;
     public CategoryFragment() {
         // Required empty public constructor
     }
