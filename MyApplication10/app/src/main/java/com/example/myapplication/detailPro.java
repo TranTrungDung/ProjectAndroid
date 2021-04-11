@@ -17,11 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-<<<<<<< HEAD
 import com.google.gson.Gson;
 
-=======
->>>>>>> 4f95179ff392ad76783f6ba6749b76f4d4e3231d
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
