@@ -117,21 +117,21 @@
             android:layout_marginBottom="15dp"
             android:text="800000"
             android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/text_priceship"
-            app:layout_constraintEnd_toEndOf="@+id/text_priceship" />
+            app:layout_constraintBottom_toTopOf="@+id/ship"
+            app:layout_constraintEnd_toEndOf="@+id/ship" />
 
         <TextView
-            android:id="@+id/text_priceship"
+            android:id="@+id/ship"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:text="30000"
             android:textSize="15dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="@+id/textView13" />
+            app:layout_constraintBottom_toTopOf="@+id/sumsum"
+            app:layout_constraintEnd_toEndOf="@+id/sumsum" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/sumsum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="35dp"

@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
 
+import java.text.BreakIterator;
+import java.text.DecimalFormat;
 import java.util.Collections;
 import java.util.List;
 
@@ -62,6 +64,7 @@ public class billadapter extends RecyclerView.Adapter<billadapter.Holder> {
                 notifyItemRemoved(holder.getAdapterPosition());
                 PrefConfig.writeListInPref(context.getApplicationContext(), taskModelList);
                 Collections.reverse(taskModelList);
+                bill.tongtien();
             }
         });
     }
