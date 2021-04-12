@@ -101,35 +101,36 @@ public class payments extends AppCompatActivity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                       if (radioButton1.isChecked()) {
-                           place(0);
-                           Gson gson = new Gson();
-                           String jsonString = gson.toJson(taskList);
-                           SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
-                           SharedPreferences.Editor editor = pref.edit();
-                           editor.clear();
-                           editor.apply();
-                           Toast.makeText(payments.this, "chua thanh toan", Toast.LENGTH_LONG).show();
-                           Intent intent = new Intent(payments.this, my_order.class);
-                           finish();
-                           startActivity(intent);
-                       } else if (radioButton2.isChecked()) {
-                           place(1);
-                           Gson gson = new Gson();
-                           String jsonString = gson.toJson(taskList);
-                           SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
-                           SharedPreferences.Editor editor = pref.edit();
-                           editor.clear();
-                           editor.apply();
-                           Toast.makeText(payments.this, "thanh toan roi", Toast.LENGTH_LONG).show();
-                           Intent intent = new Intent(payments.this, my_order.class);
-                           finish();
-                           startActivity(intent);
-                       } else {
-                           Toast.makeText(payments.this, "Select a payment method", Toast.LENGTH_LONG).show();
-                       }
-                   }
+                if (edit_name.getText().toString().equals("") || edit_phone.getText().toString().equals("") || edit_address.getText().toString().equals("")) {
+                    Toast.makeText(payments.this, "Something is null", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (radioButton1.isChecked()) {
+                        place(0);
+                        Gson gson = new Gson();
+                        String jsonString = gson.toJson(taskList);
+                        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.clear();
+                        editor.apply();
+                        Intent intent = new Intent(payments.this, my_order.class);
+                        finish();
+                        startActivity(intent);
+                    } else if (radioButton2.isChecked()) {
+                        place(1);
+                        Gson gson = new Gson();
+                        String jsonString = gson.toJson(taskList);
+                        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.clear();
+                        editor.apply();
+                        Intent intent = new Intent(payments.this, my_order.class);
+                        finish();
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(payments.this, "Select a payment method", Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
         });
     }
 
