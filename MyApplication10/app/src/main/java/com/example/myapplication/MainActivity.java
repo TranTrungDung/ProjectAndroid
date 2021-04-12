@@ -42,14 +42,14 @@ public class MainActivity extends AppCompatActivity {
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
 //   Không động vào bảng category ,user
 
-<<<<<<< HEAD
+
 //        taobang
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT ,email VARCHAR(200),username VARCHAR(200),password VARCHAR(200),phone VARCHAR(11), sumbill INTEGER)");
 //
-=======
+
 //      //  taobang
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT ,email VARCHAR(200),username VARCHAR(200),password VARCHAR(200),phone VARCHAR(11))");
->>>>>>> 13f5d4ec69cc82e6651dba0d163d90cbc29b3e17
+
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS category(id_category INTEGER PRIMARY KEY ,name VARCHAR(200))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS product(id_product INTEGER PRIMARY KEY ,id_category INTEGER,price INTEGER,name VARCHAR(200),details VARCHAR(200),image BLOG,FOREIGN KEY (id_category) REFERENCES category(id_category))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS storage_product(id_str INTEGER PRIMARY KEY AUTOINCREMENT  ,id_product INTEGER,size CHAR(10),amount INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product))");
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_product INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
 //
 //
-<<<<<<< HEAD
+
 ////        chendulieu
 //
 ////        baiHocHelper.QueryData("INSERT INTO bill VALUES(1,1,6/4/2021,730000,0)");
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(5,2,855000,'HERMES SWEATER','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.sweaterhermes+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(6,1,122000,'aodep','aodepquadi','"+R.drawable.th2+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(7,4,122000,'aodep','aodepquadi','"+R.drawable.ao2+"')");
-=======
+
 //       // chendulieu
 //
 //      //  baiHocHelper.QueryData("INSERT INTO bill VALUES(1,1,6/4/2021,730000,0)");
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(14,4,900000,'BIKER JEAN','Denim no Fade','"+R.drawable.bikerjean+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(15,4,800000,'PRINTED JEANS ','Denim no Fade','"+R.drawable.printedjeans+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(16,4,800000,'RIPPED JEANS ','Denim no Fade','"+R.drawable.rippedjeans+"')");
->>>>>>> 13f5d4ec69cc82e6651dba0d163d90cbc29b3e17
+
 //
 ////
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(1,'JACKETS')");
@@ -129,12 +129,12 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','XL','50')");
 //
-<<<<<<< HEAD
+
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632', 0)");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678', 0)");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321',0)");
 
-=======
+
 //            //Bảng lưu trữ (id =5)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'5','S','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'5','M','50')");
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
 //
->>>>>>> 13f5d4ec69cc82e6651dba0d163d90cbc29b3e17
+
 
 //        //xoadulieu
 //        baiHocHelper.QueryData("DELETE FROM product");
