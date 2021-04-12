@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //       // chendulieu
 //
-//      //  baiHocHelper.QueryData("INSERT INTO bill VALUES(1,1,6/4/2021,730000,0)");
-//      //  baiHocHelper.QueryData("INSERT INTO details_bill VALUES(1,1,1,730000)");
 //
 //          baiHocHelper.QueryData("INSERT INTO product VALUES(1,1,800000,'MONOGRAM HOODIE','98% Cotton','"+R.drawable.hoddiemixjacket+"')");
 //          baiHocHelper.QueryData("INSERT INTO product VALUES(2,1,960000,'LEGEND DENIM JACKET','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.legendjacket+"')");
