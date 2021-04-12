@@ -103,7 +103,7 @@ public class bill extends AppCompatActivity {
                     fm.beginTransaction().replace(R.id.activity_bill, fragment).commit();
                     next.setVisibility(View.INVISIBLE);
                 }else if(taskList.size() == 0){
-                    Toast.makeText(bill.this, "hay them san pham", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(bill.this, "Your bag is null", Toast.LENGTH_SHORT).show();
                 }
                 else{
                  int h = Integer.parseInt(sumsum.getText().toString());
