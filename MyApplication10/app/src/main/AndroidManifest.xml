@@ -8,7 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:hardwareAccelerated="false"
         android:theme="@style/Theme.MyApplication">
+
         <activity android:name=".rankActivity"></activity>
         <activity android:name=".payments" />
         <activity android:name=".my_order" />

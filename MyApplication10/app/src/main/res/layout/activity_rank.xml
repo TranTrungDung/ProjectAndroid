@@ -13,7 +13,7 @@
         android:id="@+id/listrank"
         android:layout_width="match_parent"
         android:layout_height="465dp"
-        android:background="@color/white"
+        android:background="#80B8B6B6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
