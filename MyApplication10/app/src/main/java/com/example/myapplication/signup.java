@@ -46,9 +46,6 @@ public class signup extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                MikensicoFragment fragment = new MikensicoFragment();
-                fm.beginTransaction().replace(R.id.sign, fragment).commit();
                 finish();
             }
         });
@@ -97,9 +94,14 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this, "Email invalid!", Toast.LENGTH_SHORT).show();
                         }
                     else {
+<<<<<<< HEAD
                         baiHocHelper.QueryData("INSERT INTO user VALUES( null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"',0  )");
                         Toast.makeText(signup.this,"Sign up access!", Toast.LENGTH_SHORT).show();
 
+=======
+                        baiHocHelper.QueryData("INSERT INTO user VALUES( 8,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"'  )");
+                        finish();
+>>>>>>> 13f5d4ec69cc82e6651dba0d163d90cbc29b3e17
                     }
                 }
             }
