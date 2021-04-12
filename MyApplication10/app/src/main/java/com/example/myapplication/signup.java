@@ -94,8 +94,14 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this, "Email invalid!", Toast.LENGTH_SHORT).show();
                         }
                     else {
+
+                        baiHocHelper.QueryData("INSERT INTO user VALUES( null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"',0  )");
+                        Toast.makeText(signup.this,"Sign up access!", Toast.LENGTH_SHORT).show();
+
+
                         baiHocHelper.QueryData("INSERT INTO user VALUES( 8,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"'  )");
                         finish();
+
                     }
                 }
             }

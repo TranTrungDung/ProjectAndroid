@@ -28,6 +28,7 @@ public class MikensicoFragment extends Fragment {
     // TODO: Rename and change types of parameters
     Button btnsignup,btnlogout;
     Button btnlogin;
+    Button btnrank;
     EditText user_lg, password_lg;
     BaiHocHelper baiHocHelper;
     Button btnLogout;
@@ -92,6 +93,17 @@ public class MikensicoFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+
+            btnrank = view.findViewById(R.id.rank);
+            btnrank.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),rankActivity.class);
+                    startActivity(intent);
+                }
+
+            });
+
             btnlogout = view.findViewById(R.id.btnLogout);
             username  = view.findViewById(R.id.username);
             username.setText(name);
