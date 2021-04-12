@@ -82,11 +82,11 @@ public class billadapter extends RecyclerView.Adapter<billadapter.Holder> {
             super(itemView);
             swipeRevealLayout = itemView.findViewById(R.id.SwipeRevealLayout);
             layoutdelete = itemView.findViewById(R.id.layout_delete);
-            Name = itemView.findViewById(R.id.nameproduct);
-            Gia = itemView.findViewById(R.id.pricebill);
-            image = itemView.findViewById(R.id.imageproduct);
-            size = itemView.findViewById(R.id.size);
-            soluong = itemView.findViewById(R.id.soluong);
+            Name = itemView.findViewById(R.id.nameproduct1);
+            Gia = itemView.findViewById(R.id.pricebill1);
+            image = itemView.findViewById(R.id.imageproduct1);
+            size = itemView.findViewById(R.id.size1);
+            soluong = itemView.findViewById(R.id.quantity);
             pricesum = itemView.findViewById(R.id.pricesum);
 
         }

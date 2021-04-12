@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -38,6 +39,7 @@ public class payments extends AppCompatActivity {
     RadioButton radioButton1, radioButton2;
     ImageButton imageButton;
     Button order;
+    EditText edit_name,edit_phone,edit_address;
     int idcheck, sum;
     BaiHocHelper baiHocHelper;
     TextView idhd;
@@ -56,6 +58,9 @@ public class payments extends AppCompatActivity {
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         radioButton1 = (RadioButton) findViewById(R.id.radio_a);
         radioButton2 = (RadioButton) findViewById(R.id.radio_b);
+        edit_name = (EditText) findViewById(R.id.edit_Name);
+        edit_phone = (EditText) findViewById(R.id.editPhone);
+        edit_address=(EditText) findViewById(R.id.editAddress);
         TextView textView12 = findViewById(R.id.textView12);
         textView12.setVisibility(View.INVISIBLE);
         Intent intent = getIntent();
@@ -87,42 +92,45 @@ public class payments extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Order();
+
+
+         Order();
+
     }
 
     private void Order() {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    if (radioButton1.isChecked()) {
-                    place(0);
-                    Gson gson = new Gson();
-                    String jsonString = gson.toJson(taskList);
-                    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.clear();
-                    editor.apply();
-                    Toast.makeText(payments.this, "chua thanh toan", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(payments.this,my_order.class);
-                        finish();
-                        startActivity(intent);
 
-                } else if (radioButton2.isChecked()) {
-                    place(1);
-                    Gson gson = new Gson();
-                    String jsonString = gson.toJson(taskList);
-                    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.clear();
-                    editor.apply();
-                    Toast.makeText(payments.this, "thanh toan roi", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(payments.this,my_order.class);
-                    finish();
-                        startActivity(intent);
-                } else {
-                    Toast.makeText(payments.this, "Select a payment method", Toast.LENGTH_LONG).show();
-                }
-            }
+                       if (radioButton1.isChecked()) {
+                           place(0);
+                           Gson gson = new Gson();
+                           String jsonString = gson.toJson(taskList);
+                           SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
+                           SharedPreferences.Editor editor = pref.edit();
+                           editor.clear();
+                           editor.apply();
+                           Toast.makeText(payments.this, "chua thanh toan", Toast.LENGTH_LONG).show();
+                           Intent intent = new Intent(payments.this, my_order.class);
+                           finish();
+                           startActivity(intent);
+                       } else if (radioButton2.isChecked()) {
+                           place(1);
+                           Gson gson = new Gson();
+                           String jsonString = gson.toJson(taskList);
+                           SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(payments.this);
+                           SharedPreferences.Editor editor = pref.edit();
+                           editor.clear();
+                           editor.apply();
+                           Toast.makeText(payments.this, "thanh toan roi", Toast.LENGTH_LONG).show();
+                           Intent intent = new Intent(payments.this, my_order.class);
+                           finish();
+                           startActivity(intent);
+                       } else {
+                           Toast.makeText(payments.this, "Select a payment method", Toast.LENGTH_LONG).show();
+                       }
+                   }
         });
     }
 
