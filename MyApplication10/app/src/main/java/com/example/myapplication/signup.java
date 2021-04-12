@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.myapplication.SQLLite.BaiHocHelper;
+
 import java.util.regex.Pattern;
 
 import static android.view.View.GONE;
@@ -44,12 +46,9 @@ public class signup extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
                 FragmentManager fm = getSupportFragmentManager();
                 MikensicoFragment fragment = new MikensicoFragment();
                 fm.beginTransaction().replace(R.id.sign, fragment).commit();
-=======
->>>>>>> ec13fce8e778f674231a46056fcde12138699ada
                 finish();
             }
         });
