@@ -44,9 +44,12 @@ public class signup extends AppCompatActivity {
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 FragmentManager fm = getSupportFragmentManager();
                 MikensicoFragment fragment = new MikensicoFragment();
                 fm.beginTransaction().replace(R.id.sign, fragment).commit();
+=======
+>>>>>>> ec13fce8e778f674231a46056fcde12138699ada
                 finish();
             }
         });
@@ -106,6 +109,5 @@ public class signup extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
     }
 }

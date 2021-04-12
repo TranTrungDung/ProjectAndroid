@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.list;
 
 public class country {
     private  String name;

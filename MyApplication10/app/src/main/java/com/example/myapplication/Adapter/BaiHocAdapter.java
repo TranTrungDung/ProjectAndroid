@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.Collection;
+import com.example.myapplication.R;
+import com.example.myapplication.list.baihoc;
+
 import java.util.Collections;
 import java.util.List;
 

@@ -1,39 +1,28 @@
 package com.example.myapplication;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentManager;
+import com.example.myapplication.SQLLite.BaiHocHelper;
+import com.example.myapplication.list.baihoc;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.myapplication.Adapter.BaiHocAdapter;
+import com.example.myapplication.sharedprefer.PrefConfig;
 
 public class showproduct extends AppCompatActivity {
     public static final String MyPREFERENCES = "user";
@@ -80,7 +69,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
 
             }
         }
@@ -93,7 +84,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
         else if(nam.equals("SWEATERS")){
@@ -105,7 +98,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
         else if(nam.equals("T-SHIRTS")){
@@ -117,7 +112,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }else{
             allcategory = "PANTS";
@@ -128,7 +125,9 @@ public class showproduct extends AppCompatActivity {
                 int id = data.getInt(0);
                 String name = data.getString(3);
                 int im = data.getInt(5);
-                arrayList.add(new baihoc(id,price ,name,details,im));
+                int amount = 0;
+                String size = null;
+                arrayList.add(new baihoc(id,price ,name,details,im,amount,size));
             }
         }
 
@@ -160,16 +159,18 @@ public class showproduct extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fm = getSupportFragmentManager();
-                CategoryFragment fragment = new CategoryFragment();
-                fm.beginTransaction().replace(R.id.show,fragment).commit();
                 finish();
             }
         });
         bag = (TextView) findViewById(R.id.bag);
         t = taskList.size();
-            String s=String.valueOf(t);
-            bag.setText(s);
+        int k = 0,sum = 0;
+        for(int h = 0; h < t ; h++ ) {
+            k = taskList.get(h).getAmount();
+            sum += k;
+        }
+        String s=String.valueOf(sum);
+        bag.setText(s);
 
         Bag =(ImageView)findViewById(R.id.Bag);
         Bag.setOnClickListener(new View.OnClickListener() {
