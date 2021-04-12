@@ -53,6 +53,7 @@
 
     <ListView
         android:id="@+id/lv_my_order"
+        android:background="@drawable/cspay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="97dp"

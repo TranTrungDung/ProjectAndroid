@@ -57,11 +57,11 @@
         android:text="Full Name *"
         android:textColor="#000000"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName" />
+        app:layout_constraintBottom_toTopOf="@+id/edit_Name"
+        app:layout_constraintStart_toStartOf="@+id/edit_Name" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edit_Name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
@@ -84,11 +84,11 @@
         android:text="Phone *"
         android:textColor="#000000"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintBottom_toTopOf="@+id/editPhone"
+        app:layout_constraintStart_toStartOf="@+id/editPhone" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editPhone"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
@@ -102,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_Name" />
 
     <TextView
         android:id="@+id/text_address"
@@ -112,11 +112,11 @@
         android:text="Address *"
         android:textColor="#000000"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintBottom_toTopOf="@+id/editAddress"
+        app:layout_constraintStart_toStartOf="@+id/editAddress" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/editAddress"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -129,15 +129,15 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3">
+        app:layout_constraintStart_toStartOf="@+id/editAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editAddress">
 
         <RadioButton
             android:id="@+id/radio_a"

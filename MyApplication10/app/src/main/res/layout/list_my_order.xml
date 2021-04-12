@@ -11,52 +11,51 @@
         android:layout_height="150dp"
         tools:ignore="MissingConstraints">
 
+
         <TextView
             android:id="@+id/id_bill"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="325dp"
+            android:layout_marginRight="325dp"
+
             android:text="1"
+            android:textColor="#000000"
             android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.151"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/id_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
             android:text="12/2/2"
+            android:textColor="#000000"
             android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/id_bill"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.117"
-            app:layout_constraintStart_toEndOf="@+id/id_bill"
-            app:layout_constraintTop_toTopOf="@+id/id_bill" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:background="@drawable/ic_eye"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/id_bill"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/id_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
             android:text="2000"
+            android:textColor="#000000"
             android:textSize="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/id_date"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/id_date"
-            app:layout_constraintTop_toTopOf="@+id/id_date" />
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
