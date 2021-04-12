@@ -27,22 +27,22 @@ public class rankActivity extends AppCompatActivity {
     BaiHocHelper baiHocHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        int Count = 0 ;
-        for(int i=0; i<=5;i++){
-            Count ++ ;
-        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rank);
         listView = (ListView)findViewById(R.id.listrank);
         ArrayList<rankList> arrayList = new ArrayList<>();
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
+        int Count = 0 ;
+        Cursor data = baiHocHelper.GetData(" SELECT *  FROM user ORDER BY sumbill desc limit 5");
 
-        Cursor data = baiHocHelper.GetData("SELECT TOP 5 * FROM user ORDER BY sumbill DESC");
         while(data.moveToNext()){
+            Count ++;
             String username = data.getString(2);
             int sum = data.getInt(5);
             arrayList.add(new rankList(username,Count,sum));
         }
+
         //khởi tạo customArrayAdapter
         adapter= new rankAdapter(rankActivity.this,
                 R.layout.minirank,arrayList);

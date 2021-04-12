@@ -152,7 +152,7 @@ public class payments extends AppCompatActivity {
             sumpro += g;
         }
         int sumsum1 = ship1 + sumpro;
-        int iduser = 0, idbill = 0;
+        int iduser = 0, idbill = 0,sumsum2 = 0;
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         String name = sharedpreferences.getString("nameKey", "");
         Cursor data2 = baiHocHelper.GetData("SELECT * FROM user WHERE username ='" + name + "' ");
@@ -167,6 +167,12 @@ public class payments extends AppCompatActivity {
         for (int h = 0; h < t; h++) {
             baiHocHelper.QueryData("INSERT INTO details_bill VALUES('" + taskList.get(h).getId_pr() + "','" + idbill + "','" + taskList.get(h).getAmount() + "','" + Integer.parseInt(taskList.get(h).getPrice()) + "')");
         }
+        Cursor data4 = baiHocHelper.GetData("SELECT * FROM user WHERE username ='" + name + "' ");
+        while (data4.moveToNext()) {
+            sumsum2 = data4.getInt(5);
+        }
+        int sumsum3 = sumsum1 + sumsum2;
+        baiHocHelper.QueryData(" UPDATE user SET sumbill ='"+sumsum3+"'  WHERE username = '"+name+"'");
     }
 
 }

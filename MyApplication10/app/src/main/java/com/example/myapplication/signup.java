@@ -99,7 +99,7 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this,"Sign up access!", Toast.LENGTH_SHORT).show();
 
 
-                        baiHocHelper.QueryData("INSERT INTO user VALUES( 8,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"'  )");
+                        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"'  )");
                         finish();
 
                     }

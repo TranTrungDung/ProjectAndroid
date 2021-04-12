@@ -45,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
 //        taobang
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT ,email VARCHAR(200),username VARCHAR(200),password VARCHAR(200),phone VARCHAR(11), sumbill INTEGER)");
-//
-
-//      //  taobang
-//        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT ,email VARCHAR(200),username VARCHAR(200),password VARCHAR(200),phone VARCHAR(11))");
-
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS category(id_category INTEGER PRIMARY KEY ,name VARCHAR(200))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS product(id_product INTEGER PRIMARY KEY ,id_category INTEGER,price INTEGER,name VARCHAR(200),details VARCHAR(200),image BLOG,FOREIGN KEY (id_category) REFERENCES category(id_category))");
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS storage_product(id_str INTEGER PRIMARY KEY AUTOINCREMENT  ,id_product INTEGER,size CHAR(10),amount INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product))");
@@ -57,24 +52,8 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS details_bill(id_product INTEGER,id_bill INTEGER,amount INTEGER,price INTEGER,FOREIGN KEY (id_product) REFERENCES product(id_product),FOREIGN KEY (id_bill) REFERENCES bill(id_bill))");
 //
 //
-
+//
 ////        chendulieu
-//
-////        baiHocHelper.QueryData("INSERT INTO bill VALUES(1,1,6/4/2021,730000,0)");
-////        baiHocHelper.QueryData("INSERT INTO details_bill VALUES(1,1,1,730000)");
-//
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(1,3,750000,'BLIND FOR LOVE','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.pololove+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(2,3,700000,'SERPENT POLO','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.poloserpent+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(3,3,800000,'HUMAN BAROQUE ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.polobaroque+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(4,3,700000,'ANGEL DEVIL ','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.tshirtangel+"')");
-//
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(5,2,855000,'HERMES SWEATER','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.sweaterhermes+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(6,1,122000,'aodep','aodepquadi','"+R.drawable.th2+"')");
-//        baiHocHelper.QueryData("INSERT INTO product VALUES(7,4,122000,'aodep','aodepquadi','"+R.drawable.ao2+"')");
-
-//       // chendulieu
-//
-//
 //          baiHocHelper.QueryData("INSERT INTO product VALUES(1,1,800000,'MONOGRAM HOODIE','98% Cotton','"+R.drawable.hoddiemixjacket+"')");
 //          baiHocHelper.QueryData("INSERT INTO product VALUES(2,1,960000,'LEGEND DENIM JACKET','98% Cotton, 2% Spandex DTG Printer','"+R.drawable.legendjacket+"')");
 //          baiHocHelper.QueryData("INSERT INTO product VALUES(3,1,800000,'COUTURE ','98% Cotton, DC Printer','"+R.drawable.couturejacket+"')");
@@ -94,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(14,4,900000,'BIKER JEAN','Denim no Fade','"+R.drawable.bikerjean+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(15,4,800000,'PRINTED JEANS ','Denim no Fade','"+R.drawable.printedjeans+"')");
 //        baiHocHelper.QueryData("INSERT INTO product VALUES(16,4,800000,'RIPPED JEANS ','Denim no Fade','"+R.drawable.rippedjeans+"')");
-
+//
 //
 ////
 //        baiHocHelper.QueryData("INSERT INTO category VALUES(1,'JACKETS')");
@@ -127,12 +106,7 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'4','XL','50')");
 //
-
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632', 0)");
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678', 0)");
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321',0)");
-
-
+//
 //            //Bảng lưu trữ (id =5)
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'5','S','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'5','M','50')");
@@ -156,12 +130,12 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'8','M','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'8','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'8','XL','50')");
+
 //
-////
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632')");
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678')");
-//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321')");
-//
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632',)");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678',0)");
+//        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321',0)");
+
 
 
 //        //xoadulieu
