@@ -92,8 +92,7 @@ public class payments extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
+        
          Order();
 
     }
