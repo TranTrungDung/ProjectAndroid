@@ -10,8 +10,6 @@ public class baihoc implements Serializable {
     private String name;
     private String details;
     private int image;
-
-
     private String size;
     private int amount;
 

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
-import com.example.myapplication.PrefConfig;
+import com.example.myapplication.sharedprefer.PrefConfig;
 import com.example.myapplication.R;
 import com.example.myapplication.list.baihoc;
 import com.example.myapplication.bill;

@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myapplication.list.baihoc;
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.myapplication.Adapter.billadapter;
+import com.example.myapplication.sharedprefer.PrefConfig;
 
 public class bill extends AppCompatActivity {
     public static final String MyPREFERENCES = "user";
@@ -41,7 +43,7 @@ public class bill extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bill);
-        BtnNext();
+
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("data");
@@ -53,6 +55,7 @@ public class bill extends AppCompatActivity {
         ship = (TextView) findViewById(R.id.ship);
         taskList = PrefConfig.readListFromPref(this);
         tongtien();
+        BtnNext();
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
@@ -99,10 +102,15 @@ public class bill extends AppCompatActivity {
                     MikensicoFragment fragment = new MikensicoFragment();
                     fm.beginTransaction().replace(R.id.activity_bill, fragment).commit();
                     next.setVisibility(View.INVISIBLE);
-                }else{
+                }else if(taskList.size() == 0){
+                    Toast.makeText(bill.this, "hay them san pham", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                 int h = Integer.parseInt(sumsum.getText().toString());
                 Intent intent1 = new Intent(bill.this,payments.class);
                 Bundle bundle1 = new Bundle();
                 bundle1.putString("category",all);
+                bundle1.putInt("h",h);
                 intent1.putExtra("data",bundle);
                 finish();
                 startActivity(intent1);}
