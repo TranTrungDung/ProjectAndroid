@@ -42,14 +42,13 @@ public class rankActivity extends AppCompatActivity {
             }
         });
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
-        int Count = 0 ;
+
         Cursor data = baiHocHelper.GetData(" SELECT *  FROM user ORDER BY sumbill desc limit 5");
 
         while(data.moveToNext()){
-            Count ++;
             String username = data.getString(2);
             int sum = data.getInt(5);
-            arrayList.add(new rankList(username,Count,sum));
+            arrayList.add(new rankList(username,sum));
         }
 
         //khởi tạo customArrayAdapter

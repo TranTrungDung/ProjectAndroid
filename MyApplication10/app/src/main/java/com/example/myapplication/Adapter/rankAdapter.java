@@ -35,9 +35,6 @@ public class rankAdapter extends ArrayAdapter<rankList>{
         convertView = inflater.inflate(layoutResource,null);
 
 //Hàm khởi thêm dữ lieu vào các View từ arrayList thông qua position
-        TextView txt1 = (TextView)convertView.findViewById(R.id.number);
-        String tx1 = String.valueOf(arrayList.get(position).getId());
-        txt1.setText(tx1);
         TextView txt2 = (TextView)convertView.findViewById(R.id.usname);
         txt2.setText(arrayList.get(position).getName());
         TextView txt3 = (TextView)convertView.findViewById(R.id.sumprice);
