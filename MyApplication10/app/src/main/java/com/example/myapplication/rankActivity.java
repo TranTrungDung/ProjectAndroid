@@ -43,7 +43,7 @@ public class rankActivity extends AppCompatActivity {
         });
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
 
-        Cursor data = baiHocHelper.GetData(" SELECT *  FROM user ORDER BY sumbill desc limit 5");
+        Cursor data = baiHocHelper.GetData(" SELECT *  FROM user ORDER BY sumbill desc limit 3");
 
         while(data.moveToNext()){
             String username = data.getString(2);
