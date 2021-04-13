@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,8 +26,10 @@ public class rankActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     ListView listView;
     rankAdapter adapter ;
-    ImageButton imgarrowback;
+    ImageButton imgarrowback,reward;
     BaiHocHelper baiHocHelper;
+    ConstraintLayout constraintLayout;
+    static int count =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,6 +42,25 @@ public class rankActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        constraintLayout = (ConstraintLayout) findViewById(R.id.con_reward);
+        constraintLayout.setVisibility(View.INVISIBLE);
+        reward = (ImageButton) findViewById(R.id.imageButton_Reward);
+
+        reward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count++;
+                if(count%2 ==0)
+                {
+                    constraintLayout.setVisibility(View.INVISIBLE);
+                }
+                else
+                {
+                    constraintLayout.setVisibility(View.VISIBLE);
+                }
+
             }
         });
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);

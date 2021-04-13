@@ -19,14 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintlayout"
         app:layout_constraintVertical_bias="0.242"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints" >
+
+
+
+    </ListView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:id="@+id/constraintlayout"
         android:background="@drawable/cus_rank"
-        android:backgroundTint="@android:color/transparent"
         tools:ignore="MissingConstraints">
 
 
@@ -48,14 +51,13 @@
 
         <ImageButton
             android:id="@+id/image_arrow_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginStart="45dp"
             android:layout_marginLeft="45dp"
             android:layout_marginBottom="15dp"
-            android:background="@null"
-            android:backgroundTint="#FFFFFF"
-            android:src="@drawable/ic_baseline_close_24"
+            android:backgroundTint="@null"
+            android:background="@drawable/close"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +65,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_top1"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
@@ -76,21 +78,71 @@
         app:layout_constraintTop_toTopOf="@+id/listrank" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView_top2"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="88dp"
         android:background="@drawable/top2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toStartOf="@+id/imageView_top1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_top1" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView_top3"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="90dp"
         android:background="@drawable/top3"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="@+id/imageView_top2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_top2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/con_reward"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_Reward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_top11"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/con_reward" />
+
+        <ImageView
+            android:id="@+id/imageView_top12"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/top2"
+            app:layout_constraintStart_toStartOf="@+id/imageView_top11"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_top11" />
+
+        <ImageView
+            android:id="@+id/imageView_top13"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/top3"
+            app:layout_constraintStart_toStartOf="@+id/imageView_top12"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_top12" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton_Reward"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listrank" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
