@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -106,6 +107,15 @@ public class MikensicoFragment extends Fragment {
 
             btnlogout = view.findViewById(R.id.btnLogout);
             username  = view.findViewById(R.id.username);
+            Button mikenco = view.findViewById(R.id.mikenisco);
+            mikenco.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Uri uri = Uri.parse("http://mikenco.vn");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+            });
             username.setText(name);
             btnlogout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -140,4 +150,8 @@ public class MikensicoFragment extends Fragment {
         }
         return view;
     }
+    private void confirm(){
+
+    }
+
 }
