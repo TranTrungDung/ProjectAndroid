@@ -131,7 +131,10 @@ public class MainActivity extends AppCompatActivity {
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'8','L','50')");
 //        baiHocHelper.QueryData("INSERT INTO storage_product VALUES(null,'8','XL','50')");
 //
+<<<<<<< HEAD
 //
+=======
+>>>>>>> f9f10aded9505a80d31a7d421bb5927e8c4662c3
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'phamthanhquan2411@gmail.com','quan','12345','0376135632',0)");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'trantrungdung@gmail.com','dung','12345','012345678',0)");
 //        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'deodeo@gmail.com','Quynh','12345','0987654321',0)");
