@@ -55,10 +55,10 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="46cf854c-f7ee-471a-8398-c9778a63b1f7" dataset="main.bill" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="ae7a1cc2-9bed-474e-9e51-9b17b5e1fd49" dataset="main.bill" active-filter-id="EMPTY_FILTER" />
-    <filter-actions connection-id="ae7a1cc2-9bed-474e-9e51-9b17b5e1fd49" dataset="main.details_bill" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="66c13118-e2ee-4932-ace1-5d9a7d9c0636" dataset="main.bill" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="66c13118-e2ee-4932-ace1-5d9a7d9c0636" dataset="main.details_bill" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="ae7a1cc2-9bed-474e-9e51-9b17b5e1fd49" dataset="main.bill" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="ae7a1cc2-9bed-474e-9e51-9b17b5e1fd49" dataset="main.details_bill" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.category" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.storage_product" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="116f63bf-c952-4573-a0a7-fd71112e99e7" dataset="main.product" active-filter-id="EMPTY_FILTER" />
