@@ -98,9 +98,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/con_reward"
         android:layout_width="365dp"
-        android:layout_height="440dp"
+        android:layout_height="520dp"
         android:layout_marginBottom="50dp"
-        android:background="@color/white"
+        android:background="@drawable/rewards"
 
         app:layout_constraintBottom_toTopOf="@+id/imageButton_Reward"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="REWARDS"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -124,7 +124,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:text="1 Premium T-shirt ZUES"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView_top11"
             app:layout_constraintStart_toEndOf="@+id/imageView_top11"
@@ -137,7 +137,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:text="1 Street Track Pant"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView_top12"
             app:layout_constraintStart_toEndOf="@+id/imageView_top12"
@@ -149,7 +149,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginLeft="30dp"
             android:text="1 set Facemask"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView_top13"
             app:layout_constraintStart_toEndOf="@+id/imageView_top13"
@@ -223,6 +223,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+
 
 
 
