@@ -59,6 +59,7 @@ public class rankActivity extends AppCompatActivity {
                 else
                 {
                     constraintLayout.setVisibility(View.VISIBLE);
+
                 }
 
             }

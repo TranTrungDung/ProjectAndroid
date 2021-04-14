@@ -191,10 +191,10 @@
 
     <ImageButton
         android:id="@+id/imageButton_Reward"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/recoin"
+        android:background="@drawable/belt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listrank" />
@@ -203,6 +203,8 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
         android:text="REWARDS"
         android:textColor="@color/white"
@@ -215,8 +217,10 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="30dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/pdown"
         app:layout_constraintBottom_toTopOf="@+id/imageButton_Reward"
