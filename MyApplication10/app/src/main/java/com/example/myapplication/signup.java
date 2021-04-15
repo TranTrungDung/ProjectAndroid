@@ -1,11 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -16,10 +12,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.myapplication.SQLLite.BaiHocHelper;
-
-import java.util.regex.Pattern;
-
-import static android.view.View.GONE;
 
 public class signup extends AppCompatActivity {
     private Button btnback;
@@ -35,13 +27,13 @@ public class signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        username = (EditText) findViewById(R.id.user_sg);
-        email = (EditText) findViewById(R.id.email_sg);
-        passwd = (EditText) findViewById(R.id.password_sg);
-        cfpasswd = (EditText) findViewById(R.id.cfpassword_sg);
-        phone = (EditText) findViewById(R.id.phone_sg);
+        username = (EditText) findViewById(R.id.user_update);
+        email = (EditText) findViewById(R.id.email_update);
+        passwd = (EditText) findViewById(R.id.password_update);
+        cfpasswd = (EditText) findViewById(R.id.cfpassword_update);
+        phone = (EditText) findViewById(R.id.phone_update);
         btnback = (Button) findViewById(R.id.btnback);
-        btncreate = (Button)findViewById(R.id.btncreate) ;
+        btncreate = (Button)findViewById(R.id.btnupdate) ;
         baiHocHelper = new BaiHocHelper(signup.this,"mikenco.sqlite",null,1);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override

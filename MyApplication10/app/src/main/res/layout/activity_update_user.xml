@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bglogin"
+    android:background="@drawable/rome"
     android:padding="40dp"
-    android:id="@+id/sign"
-    tools:context=".signup">
-
+    tools:context=".update_user">
 
     <TextView
         android:id="@+id/tx_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Create Account !"
+        android:text="Update "
         android:textStyle="italic"
         android:textColor="#FFFFFF"
         android:textSize="45sp"
@@ -55,9 +53,10 @@
         android:hint="Email"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView11"
         app:layout_constraintTop_toBottomOf="@+id/user_update" />
 
@@ -74,10 +73,12 @@
         android:inputType="textPassword"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_update" />
 
     <EditText
@@ -93,10 +94,11 @@
         android:inputType="textPassword"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_update" />
 
     <EditText
@@ -111,23 +113,22 @@
         android:hint="Phone number"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cfpassword_update" />
 
-
-
     <Button
-        android:id="@+id/btnupdate"
+        android:id="@+id/btn_update"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/btnlogin"
-        android:text="Create"
+        android:text="Update"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:backgroundTint="@null"
@@ -136,7 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/phone_update" />
 
     <Button
-        android:id="@+id/btnback"
+        android:id="@+id/btn_back"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="@drawable/btnlogin"
@@ -145,12 +146,11 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="@+id/btnupdate"
-        app:layout_constraintEnd_toStartOf="@+id/btnupdate"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_update"
+        app:layout_constraintEnd_toStartOf="@+id/btn_update"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/phone_update"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
