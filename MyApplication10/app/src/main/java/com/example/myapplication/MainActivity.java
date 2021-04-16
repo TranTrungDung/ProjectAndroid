@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         });
         //tao database
         baiHocHelper = new BaiHocHelper(this,"mikenco.sqlite",null,1);
+<<<<<<< HEAD
+//   Không động vào bảng category ,user
+=======
+>>>>>>> c4f0c2025ecc0c0b04d32d69d11f9ee50cbe41c0
 
 //        taobang
 //        baiHocHelper.QueryData("CREATE TABLE IF NOT EXISTS user(id INTEGER PRIMARY KEY AUTOINCREMENT ,email VARCHAR(200),username VARCHAR(200),password VARCHAR(200),phone VARCHAR(11), sumbill INTEGER)");
