@@ -20,13 +20,13 @@
             android:id="@+id/usname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
             android:text="username"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.201"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.504" />
@@ -35,16 +35,16 @@
             android:id="@+id/sumprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
-            android:layout_marginLeft="84dp"
             android:text="10000000"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/usname"
-            app:layout_constraintStart_toEndOf="@+id/usname"
-            app:layout_constraintTop_toTopOf="@+id/usname"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.746"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".update_user"></activity>
+        <activity android:name=".forgot_pass"></activity>
+        <activity android:name=".update_user" />
         <activity android:name=".rankActivity" />
         <activity android:name=".payments" />
         <activity android:name=".my_order" />

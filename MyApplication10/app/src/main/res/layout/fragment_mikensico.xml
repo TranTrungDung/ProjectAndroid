@@ -49,11 +49,11 @@
         android:paddingEnd="12dp"
         android:textColorHint="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/tx_forgot"
         app:layout_constraintTop_toBottomOf="@+id/user_lg" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tx_forgot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"

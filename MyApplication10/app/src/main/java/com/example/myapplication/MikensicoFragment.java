@@ -33,7 +33,7 @@ public class MikensicoFragment extends Fragment {
     EditText user_lg, password_lg;
     BaiHocHelper baiHocHelper;
     Button btnLogout;
-    TextView username;
+    TextView username,forget;
     Button myorder;
     private BaiHocHelper baihocHelper;
     @Override
@@ -44,7 +44,14 @@ public class MikensicoFragment extends Fragment {
         String name = sharedpreferences.getString("nameKey","");
         if (name == ""){
             view = inflater.inflate(R.layout.fragment_mikensico, container, false);
-
+            forget = view.findViewById(R.id.tx_forgot);
+            forget.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),forgot_pass.class);
+                    startActivity(intent);
+                }
+            });
 //            Toast.makeText(getActivity(),"abc",Toast.LENGTH_LONG).show();
             btnsignup = view.findViewById(R.id.btnsignup);
             btnsignup.setOnClickListener(new View.OnClickListener() {

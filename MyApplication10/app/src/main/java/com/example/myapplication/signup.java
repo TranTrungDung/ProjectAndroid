@@ -22,13 +22,13 @@ public class signup extends AppCompatActivity {
     EditText cfpasswd;
     EditText phone;
     BaiHocHelper baiHocHelper;
-
+    String pass = null , cfpass = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        username = (EditText) findViewById(R.id.user_update);
-        email = (EditText) findViewById(R.id.email_update);
+        username = (EditText) findViewById(R.id.user_pass);
+        email = (EditText) findViewById(R.id.pass_pass);
         passwd = (EditText) findViewById(R.id.password_update);
         cfpasswd = (EditText) findViewById(R.id.cfpassword_update);
         phone = (EditText) findViewById(R.id.phone_update);
@@ -43,6 +43,7 @@ public class signup extends AppCompatActivity {
         });
 
         btncreate.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 checkDataEntered();
@@ -57,6 +58,8 @@ public class signup extends AppCompatActivity {
                 return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
             }
             void checkDataEntered(){
+                pass =passwd.getText().toString();
+                cfpass=cfpasswd.getText().toString();
                 if(isEmail(email) == false ) {
                     email.setError("Enter valid email!");
                 }
@@ -86,14 +89,19 @@ public class signup extends AppCompatActivity {
                         Toast.makeText(signup.this, "Email invalid!", Toast.LENGTH_SHORT).show();
                         }
                     else {
+                        if(pass.equals(cfpass) )
+                        {
+                            baiHocHelper.QueryData("INSERT INTO user VALUES( null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"',0  )");
+                            Toast.makeText(signup.this,"Sign up access!", Toast.LENGTH_SHORT).show();
 
-                        baiHocHelper.QueryData("INSERT INTO user VALUES( null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"',0  )");
-                        Toast.makeText(signup.this,"Sign up access!", Toast.LENGTH_SHORT).show();
+                            finish();
 
 
-                        baiHocHelper.QueryData("INSERT INTO user VALUES(null,'"+email.getText().toString()+"','"+username.getText().toString()+"','"+passwd.getText().toString()+"','"+phone.getText().toString()+"'  )");
-                        finish();
-
+                        }
+                        else
+                        {
+                            Toast.makeText(signup.this, "Password not match !!!", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
             }

@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/rome"
     android:padding="40dp"
+    android:id="@+id/f_update"
     tools:context=".update_user">
 
     <TextView
-        android:id="@+id/tx_update"
+        android:id="@+id/tx_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -22,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/user_update"
+        android:id="@+id/user_pass"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="92dp"
@@ -42,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/email_update"
+        android:id="@+id/pass_pass"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="28dp"
@@ -57,8 +58,8 @@
         android:textColorHint="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/user_update" />
+        app:layout_constraintStart_toStartOf="@+id/tx_forgot"
+        app:layout_constraintTop_toBottomOf="@+id/user_pass" />
 
     <EditText
         android:id="@+id/password_update"
@@ -79,27 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_update" />
-
-    <EditText
-        android:id="@+id/cfpassword_update"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/custom_input"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="12dp"
-        android:ems="10"
-        android:hint="Confirm password"
-        android:inputType="textPassword"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_update" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_pass" />
 
     <EditText
         android:id="@+id/phone_update"
@@ -118,20 +99,18 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cfpassword_update" />
+        app:layout_constraintTop_toBottomOf="@+id/password_update" />
 
     <Button
         android:id="@+id/btn_update"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginTop="92dp"
         android:background="@drawable/btnlogin"
+        android:backgroundTint="@null"
         android:text="Update"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:backgroundTint="@null"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="@+id/phone_update"
         app:layout_constraintTop_toBottomOf="@+id/phone_update" />
@@ -148,7 +127,7 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="@+id/btn_update"
         app:layout_constraintEnd_toStartOf="@+id/btn_update"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.153"
         app:layout_constraintStart_toStartOf="@+id/phone_update"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
