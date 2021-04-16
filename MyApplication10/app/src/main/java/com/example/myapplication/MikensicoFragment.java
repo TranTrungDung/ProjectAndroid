@@ -107,6 +107,13 @@ public class MikensicoFragment extends Fragment {
 
             btnlogout = view.findViewById(R.id.btnLogout);
             username  = view.findViewById(R.id.username);
+            username.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(),update_user.class);
+                    startActivity(intent);
+                }
+            });
             Button mikenco = view.findViewById(R.id.mikenisco);
             mikenco.setOnClickListener(new View.OnClickListener() {
                 @Override
