@@ -24,7 +24,7 @@ public class update_user extends AppCompatActivity {
     EditText tx_user, tx_email, tx_pass, tx_phone;
     int id = 0;
     String username = null, email = null, password = null, phone = null;
-    private String mName = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
